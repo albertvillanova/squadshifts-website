@@ -49,8 +49,18 @@
   <section id='teaser'>
     <figure class='figure'>
       <img id='teaser-img' class='figure-img img-fluid' src='./images/figure1.pdf' />
-      <figcaption class='figure-caption text-center' id='figure1-caption'>
-      FIGURE CAPTION 1.
+      <figcaption class='figure-caption text-left' id='figure1-caption'>
+        Model and human F1 scores on the original SQuAD v1.1 test set compared
+        to our new test sets for a broad set of 25 models. Each point corresponds to a model evaluation,
+        shown with 95% Student's-t confidence intervals (mostly covered by the
+        point markers). The plots reveal three main phenomena: (i) There is no
+        evidence of adaptive overfitting on SQuAD, (ii) all of the models
+        suffer F1 drops on the new datasets, with the magnitude of the drop
+        strongly depending on the corpus, and (iii) humans are substantially
+        more robust to natural distribution shifts than the models. The slopes
+        of the linear fits are 1.0, 1.03, 1.06, and 1.13, respectively. This
+        means that every point of F1 improvement on the original dataset
+        translates into roughly 1 point of improvement on our new datasets.
       </figcaption>
     </figure>
   </section>
