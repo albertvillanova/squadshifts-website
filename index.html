@@ -2,107 +2,114 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./static/index.css">
-  <title>The Effect of Natural Distribution Shift on Question Answering Models</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/index.css">
+    <title>The Effect of Natural Distribution Shift on Question Answering Models</title>
 </head>
 
 <body>
-  <section id='header'>
-    <h1 id='title'>
-        The Effect of Natural Distribution Shift <br/>
-        on Question Answering Models
-    </h1>
-    <h2 id='authors' class='text-muted'>
-      <ul>
-        <li><a href='https://people.eecs.berkeley.edu/~miller_john/'>John Miller</a></li>
-        <li><a href='https://www.karlk.net'>Karl Krauth</a></li>
-        <li><a href='https://people.csail.mit.edu/ludwigs/'>Ludwig Schmidt</a></li>
-        <li><a href='https://people.eecs.berkeley.edu/~brecht/'>Ben Recht</a></li>
-      </ul>
-    </h2>
-  </section>
-  <section id='abstract'>
-    <h3 class='heading'><span>Abstract</span></h3>
-    <div class='content'>
-        We build four new test sets for the 
-        <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset (SQuAD)</a>
-        and evaluate the ability of question-answering systems to generalize to new
-        data. In the original Wikipedia domain, we find no evidence of adaptive
-        overfitting despite several years of test-set reuse. On datasets derived
-        from New York Times articles, Reddit posts, and Amazon product reviews, we
-        observe average performance drops of 3.0, 12.6, and 14.0 F1, respectively,
-        across a broad range of models. In contrast, a strong human baseline matches
-        or exceeds the performance of SQuAD models on the original domain and
-        exhibits little to no drop in new domains. Taken together, our results
-        confirm the surprising resilience of the holdout method and emphasize the
-        need to move towards evaluation metrics that incorporate robustness to
-        natural distribution shifts.
-    </div>
-  </section>
-  <section id='teaser'>
-    <figure class='figure'>
-      <img id='teaser-img' class='figure-img img-fluid' src='./images/figure1.pdf' />
-      <figcaption class='figure-caption text-left' id='figure1-caption'>
-        Model and human F1 scores on the original SQuAD v1.1 test set compared
-        to our new test sets for a broad set of 25 models. Each point corresponds to a model evaluation,
-        shown with 95% Student's-t confidence intervals (mostly covered by the
-        point markers). The plots reveal three main phenomena: (i) There is no
-        evidence of adaptive overfitting on SQuAD, (ii) all of the models
-        suffer F1 drops on the new datasets, with the magnitude of the drop
-        strongly depending on the corpus, and (iii) humans are substantially
-        more robust to natural distribution shifts than the models. The slopes
-        of the linear fits are 1.0, 1.03, 1.06, and 1.13, respectively. This
-        means that every point of F1 improvement on the original dataset
-        translates into roughly 1 point of improvement on our new datasets.
-      </figcaption>
-    </figure>
-  </section>
+    <section id='header'>
+        <h1 id='title'>
+            The Effect of Natural Distribution Shift <br/>
+            on Question Answering Models
+        </h1>
+        <h2 id='authors' class='text-muted'>
+            <ul>
+                <li><a href='https://people.eecs.berkeley.edu/~miller_john/'>John Miller</a></li>
+                <li><a href='https://www.karlk.net'>Karl Krauth</a></li>
+                <li><a href='https://people.csail.mit.edu/ludwigs/'>Ludwig Schmidt</a></li>
+                <li><a href='https://people.eecs.berkeley.edu/~brecht/'>Ben Recht</a></li>
+            </ul>
+        </h2>
+    </section>
+    <section id='abstract'>
+        <h3 class='heading'><span>Abstract</span></h3>
+        <div class='content'>
+            We build four new test sets for the 
+            <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset (SQuAD)</a>
+            and evaluate the ability of question-answering systems to generalize to new
+            data. In the original Wikipedia domain, we find no evidence of adaptive
+            overfitting despite several years of test-set reuse. On datasets derived
+            from New York Times articles, Reddit posts, and Amazon product reviews, we
+            observe average performance drops of 3.0, 12.6, and 14.0 F1, respectively,
+            across a broad range of models. In contrast, a strong human baseline matches
+            or exceeds the performance of SQuAD models on the original domain and
+            exhibits little to no drop in new domains. Taken together, our results
+            confirm the surprising resilience of the holdout method and emphasize the
+            need to move towards evaluation metrics that incorporate robustness to
+            natural distribution shifts.
+        </div>
+    </section>
+    <section id='teaser'>
+        <figure class='figure'>
+            <img id='teaser-img' class='figure-img img-fluid' src='./images/figure1.pdf' />
+            <figcaption class='figure-caption text-left' id='figure1-caption'>
+                Model and human F1 scores on the original SQuAD v1.1 test set compared
+                to our new test sets for a broad set of 25 models. Each point corresponds to a model evaluation,
+                shown with 95% Student's-t confidence intervals (mostly covered by the
+                point markers). The plots reveal three main phenomena: (i) There is no
+                evidence of adaptive overfitting on SQuAD, (ii) all of the models
+                suffer F1 drops on the new datasets, with the magnitude of the drop
+                strongly depending on the corpus, and (iii) humans are substantially
+                more robust to natural distribution shifts than the models. The slopes
+                of the linear fits are 1.0, 1.03, 1.06, and 1.13, respectively. This
+                means that every point of F1 improvement on the original dataset
+                translates into roughly 1 point of improvement on our new datasets.
+            </figcaption>
+        </figure>
+    </section>
 
-  <section id="leaderboards">
-      <h3 class="heading"> <span> Leaderboards </span></h3>
-      <div class="content">
-          <div id="links">
-            <a href="squad.html"> <span> SQuAD 1.2 </span> </a>
-            <a href="nyt.html"> <span> New York Times </span> </a>
-            <a href="reddit.html"> <span> Reddit Comments </span> </a>
-            <a href="amazon.html"> <span> Amazon Reviews </span> </a>
-          </div>
-      </div>
-  </section>
+    <section id="leaderboards">
+        <h3 class="heading"> <span> Leaderboards </span></h3>
+        <div class="content">
+            <div id="links">
+                <a href="squad.html"> <span> SQuAD 1.2 </span> </a>
+                <a href="nyt.html"> <span> New York Times </span> </a>
+                <a href="reddit.html"> <span> Reddit Comments </span> </a>
+                <a href="amazon.html"> <span> Amazon Reviews </span> </a>
+            </div>
+        </div>
+    </section>
 
-  <section id="downloads">
-      <h3 class="heading"> <span> Download Datasets </span></h3>
-      <div class="content">
-          <div id="links">
-            <a href="https://ndownloader.figshare.com/files/21500115?private_link=2f119bea3e8d711047ec"> <span> SQuAD 1.2 </span> </a>
-            <a href="https://ndownloader.figshare.com/files/21500118?private_link=2f119bea3e8d711047ec"> <span> New York Times </span> </a>
-            <a href="https://ndownloader.figshare.com/files/21500112?private_link=2f119bea3e8d711047ec"> <span> Reddit Comments </span> </a>
-            <a href="https://ndownloader.figshare.com/files/21500109?private_link=2f119bea3e8d711047ec"> <span> Amazon Reviews </span> </a>
-          </div>
-      </div>
-  </section>
+    <section id="downloads">
+        <h3 class="heading"> <span> Download Datasets </span></h3>
+        <div class="content">
+            <div id="links">
+                <a href="https://ndownloader.figshare.com/files/21500115?private_link=2f119bea3e8d711047ec">
+                    <span> SQuAD 1.2 </span>
+                </a>
+                <a href="https://ndownloader.figshare.com/files/21500118?private_link=2f119bea3e8d711047ec">
+                    <span> New York Times </span>
+                </a>
+                <a href="https://ndownloader.figshare.com/files/21500112?private_link=2f119bea3e8d711047ec">
+                    <span> Reddit Comments </span>
+                </a>
+                <a href="https://ndownloader.figshare.com/files/21500109?private_link=2f119bea3e8d711047ec">
+                    <span> Amazon Reviews </span> 
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <section id='acknowledgements'>
-    <h3 class='heading'><span>Acknowledgements</span></h3>
-    We thank <a href="https://rajpurkar.github.io">Pranav Rajpurkar</a> and 
-    <a href="http://stanford.edu/~robinjia/">Robin Jia</a> 
-    for making the original SQuAD data
-    generation pipeline available to us and answering our many questions about
-    the SQuAD dataset. We thank the
-    <a href="https://worksheets.codalab.org">Codalab</a> 
-    team for supporting our model evaluation efforts, This research was
-    generously supported in part by the National Science Foundation Graduate
-    Research Fellowship Program under Grant No. DGE 1752814 ABC, an Amazon AWS
-    AI Research Award, and a gift from Microsoft Research.
-    </div>
-  </section>
+    <section id='acknowledgements'>
+        <h3 class='heading'><span>Acknowledgements</span></h3>
+        We thank <a href="https://rajpurkar.github.io">Pranav Rajpurkar</a> and 
+        <a href="http://stanford.edu/~robinjia/">Robin Jia</a> 
+        for making the original SQuAD data
+        generation pipeline available to us and answering our many questions about
+        the SQuAD dataset. We thank the
+        <a href="https://worksheets.codalab.org">Codalab</a> 
+        team for supporting our model evaluation efforts, This research was
+        generously supported in part by the National Science Foundation Graduate
+        Research Fellowship Program under Grant No. DGE 1752814 ABC, an Amazon AWS
+        AI Research Award, and a gift from Microsoft Research.
+    </section>
 </body>
 
 </html>

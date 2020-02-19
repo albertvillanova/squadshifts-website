@@ -1,57 +1,81 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./static/index.css">
-  <title>The Effect of Natural Distribution Shift on Question Answering Models</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/index.css">
+    <title>The Effect of Natural Distribution Shift on Question Answering Models</title>
 </head>
 
-<body>
+<body onload="renderLeaderboard('squad1.2')">
+    <section id='header'>
+        <h1 id='title'>
+            The Effect of Natural Distribution Shift <br/>
+            on Question Answering Models
+        </h1>
+    <h2 id='authors' class='text-muted'>
+        <ul>
+            <li><a href='https://people.eecs.berkeley.edu/~miller_john/'>John Miller</a></li>
+            <li><a href='https://www.karlk.net'>Karl Krauth</a></li>
+            <li><a href='https://people.csail.mit.edu/ludwigs/'>Ludwig Schmidt</a></li>
+            <li><a href='https://people.eecs.berkeley.edu/~brecht/'>Ben Recht</a></li>
+        </ul>
+    </h2>
+    </section>
+    <section id="leaderboards">
+        <div class="content">
+            <div id="links">
+                <a href="index.html"> <span> Home  </span> </a>
+                <a href="nyt.html"> <span> New York Times </span> </a>
+                <a href="reddit.html"> <span> Reddit Comments </span> </a>
+                <a href="amazon.html"> <span> Amazon Reviews </span> </a>
+            </div>
+        </div>
+    </section>
+  
+    <section id="downloads">
+        <div class="content">
+            <div id="links">
+                <a href="https://ndownloader.figshare.com/files/21500115?private_link=2f119bea3e8d711047ec">
+                    <span> Download SQuAD v1.2 data </span> 
+                </a>
+            </div>
+        </div>
+    </section>
 
-<h2>HTML Table</h2>
-    <table>
-    <tr>
-        <th>Company</th>
-        <th>Contact</th>
-        <th>Country</th>
-    </tr>
-    <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-    </tr>
-    <tr>
-        <td>Centro comercial Moctezuma</td>
-        <td>Francisco Chang</td>
-        <td>Mexico</td>
-    </tr>
-    <tr>
-        <td>Ernst Handel</td>
-        <td>Roland Mendel</td>
-        <td>Austria</td>
-    </tr>
-    <tr>
-        <td>Island Trading</td>
-        <td>Helen Bennett</td>
-        <td>UK</td>
-    </tr>
-    <tr>
-        <td>Laughing Bacchus Winecellars</td>
-        <td>Yoshi Tannamuri</td>
-        <td>Canada</td>
-    </tr>
-    <tr>
-        <td>Magazzini Alimentari Riuniti</td>
-        <td>Giovanni Rovelli</td>
-        <td>Italy</td>
-    </tr>
-    </table>
+    <div class="infoCard">
+        <div class="infoBody">
+            <div class="infoHeadline"><h2>SQuAD v1.2 Leaderboard </h2></div>
+            <p> The ExactMatch (EM) and F1 scores evaluated on the test set of SQuAD v1.2.</p>
+            <table class="table performanceTable" id="leaderboard"></table>
+            <script id="template" type="x-tmpl-mustache">
+                <tr>
+                    <th>Rank</th>
+                    <th>Model</th>
+                    <th>EM</th>
+                    <th>F1</th>
+                </tr>
+                {{#leaderboard}}
+                <tr class="{{row_class}}">
+                    <td>{{rank}}</td>
+                    <td>
+                        {{name}}
+                        <p class="institution">{{institution}}</p>
+                        <a href="{{paper_link}}">{{paper_link}}</a>
+                    </td>
+                    <td>{{scores.new_wiki.em}}</td>
+                    <td>{{scores.new_wiki.f1}}<td>
+                </tr>
+                {{/leaderboard}}
+            </script>
+        </div>
+    </div>
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="render.js"></script>
 </body>
-
 </html>
