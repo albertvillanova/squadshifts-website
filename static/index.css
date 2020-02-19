@@ -61,6 +61,10 @@ pre.inline {
     width: 100%;
 }
 
+#leaderboards {
+    text-align: center;
+}
+
 #downloads {
     text-align: center;
 }
@@ -74,7 +78,7 @@ a:hover {
     text-decoration: none;
 }
 
-#paper-links a {
+#links a {
     display: inline-block;
     padding: 10px;
     margin: 0 5px;
