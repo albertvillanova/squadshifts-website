@@ -1,1 +1,63 @@
-Hello World
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./static/index.css">
+  <title>The Effect of Natural Distribution Shift on Question Answering Models</title>
+</head>
+
+<body>
+  <section id='header'>
+    <h1 id='title'>
+        The Effect of Natural Distribution Shift on Question Answering Models
+    </h1>
+    <h2 id='authors' class='text-muted'>
+      <ul>
+        <li><a href='https://people.eecs.berkeley.edu/~miller_john/'>John Miller</a></li>
+        <li><a href='https://www.karlk.net'>Karl Krauth</a></li>
+        <li><a href='https://people.csail.mit.edu/ludwigs/'>Ludwig Schmidt</a></li>
+        <li><a href='https://people.eecs.berkeley.edu/~brecht/'>Ben Recht</a></li>
+      </ul>
+    </h2>
+  </section>
+  <section id='abstract'>
+    <h3 class='heading'><span>Abstract</span></h3>
+    <div class='content'>
+        We build four new test sets for the Stanford Question Answering Dataset (SQuAD)
+        and evaluate the ability of question-answering systems to generalize to new
+        data. In the original Wikipedia domain, we find no evidence of adaptive
+        overfitting despite several years of test-set reuse. On datasets derived
+        from New York Times articles, Reddit posts, and Amazon product reviews, we
+        observe average performance drops of 3.0, 12.6, and 14.0 F1, respectively,
+        across a broad range of models. In contrast, a strong human baseline matches
+        or exceeds the performance of SQuAD models on the original domain and
+        exhibits little to no drop in new domains. Taken together, our results
+        confirm the surprising resilience of the holdout method and emphasize the
+        need to move towards evaluation metrics that incorporate robustness to
+        natural distribution shifts.
+    </div>
+  </section>
+  <section id='teaser'>
+    <figure class='figure'>
+      <img id='teaser-img' class='figure-img img-fluid' src='./images/figure1.pdf' />
+      <figcaption class='figure-caption text-center' id='figure1-caption'>
+      FIGURE CAPTION 1.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id='acknowledgements'>
+    <h3 class='heading'><span>Acknowledgements</span></h3>
+    TODO
+    </div>
+  </section>
+</body>
+
+</html>
