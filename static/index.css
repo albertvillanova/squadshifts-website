@@ -73,6 +73,10 @@ a {
     border-bottom: solid 1px rgb(43, 0, 83);
     color: rgb(43, 0, 83);
 }
+a.active {
+    background: rgba(43, 0, 83, 0.1);
+    text-decoration: none;
+}
 a:hover {
     background: rgba(43, 0, 83, 0.1);
     text-decoration: none;
