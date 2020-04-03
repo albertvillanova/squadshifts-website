@@ -58,8 +58,8 @@
             "paper_link": "http://allennlp.org/",
             "reddit_em": 44.38437213,
             "reddit_f1": 59.59067649,
-            "test_em": 67.974,
-            "test_f1": 77.323
+            "test_em": 67.618,
+            "test_f1": 77.151
         },
         {
             "amazon_em": 75.676,
@@ -77,17 +77,17 @@
             "test_f1": 94.69
         },
         {
-            "amazon_em": 69.338,
-            "amazon_f1": 82.872,
+            "amazon_em": 59.784,
+            "amazon_f1": 75.969,
             "institution": "Team 42-alpha",
             "name": "Bert-Large+Adv. Train",
-            "new-wiki_em": 82.345,
-            "new-wiki_f1": 91.503,
-            "nyt_em": 83.792,
-            "nyt_f1": 91.746,
+            "new-wiki_em": 74.848,
+            "new-wiki_f1": 86.55,
+            "nyt_em": 74.483,
+            "nyt_f1": 85.821,
             "paper_link": "https://arxiv.org/abs/1910.09342",
-            "reddit_em": 72.022,
-            "reddit_f1": 84.028,
+            "reddit_em": 62.173,
+            "reddit_f1": 76.753,
             "test_em": 80.061,
             "test_f1": 88.6
         },

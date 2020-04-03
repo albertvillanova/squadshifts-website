@@ -23,8 +23,8 @@
             <ul>
                 <li><a href='https://people.eecs.berkeley.edu/~miller_john/'>John Miller</a></li>
                 <li><a href='https://www.karlk.net'>Karl Krauth</a></li>
-                <li><a href='https://people.csail.mit.edu/ludwigs/'>Ludwig Schmidt</a></li>
                 <li><a href='https://people.eecs.berkeley.edu/~brecht/'>Ben Recht</a></li>
+                <li><a href='https://people.csail.mit.edu/ludwigs/'>Ludwig Schmidt</a></li>
             </ul>
         </h2>
     </section>
@@ -37,7 +37,7 @@
             data. In the original Wikipedia domain, we find no evidence of adaptive
             overfitting despite several years of test-set reuse. On datasets derived
             from New York Times articles, Reddit posts, and Amazon product reviews, we
-            observe average performance drops of 3.4, 12.8, and 15.3 F1, respectively,
+            observe average performance drops of 3.8, 14.0, and 17.4 F1, respectively,
             across a broad range of models. In contrast, a strong human baseline matches
             or exceeds the performance of SQuAD models on the original domain and
             exhibits little to no drop in new domains. Taken together, our results
@@ -51,16 +51,18 @@
             <img id='teaser-img' class='figure-img img-fluid' src='./images/figure1.svg' />
             <figcaption class='figure-caption text-left' id='figure1-caption'>
                 Model and human F1 scores on the original SQuAD v1.1 test set compared
-                to our new test sets for a broad set of 25 models. Each point corresponds to a model evaluation,
-                shown with 95% Student's-t confidence intervals (mostly covered by the
-                point markers). The plots reveal three main phenomena: (i) There is no
-                evidence of adaptive overfitting on SQuAD, (ii) all of the models
-                suffer F1 drops on the new datasets, with the magnitude of the drop
-                strongly depending on the corpus, and (iii) humans are substantially
-                more robust to natural distribution shifts than the models. The slopes
-                of the linear fits are 1.0, 1.03, 1.06, and 1.13, respectively. This
-                means that every point of F1 improvement on the original dataset
-                translates into roughly 1 point of improvement on our new datasets.
+                to our new test sets for a broad set more than 100  models. Each
+                point corresponds to a model evaluation, shown with 95%
+                Student's-t confidence intervals (mostly covered by the point
+                markers). The plots reveal three main phenomena: (i) There is no
+                evidence of adaptive overfitting on SQuAD, (ii) all of the
+                models suffer F1 drops on the new datasets, with the magnitude
+                of the drop strongly depending on the corpus, and (iii) humans
+                are substantially more robust to natural distribution shifts
+                than the models. The slopes of the linear fits are 0.92, 1.02,
+                1.19, and 1.36, respectively. This means that every point of F1
+                improvement on the original dataset translates into roughly 1
+                point of improvement on our new datasets.
             </figcaption>
         </figure>
     </section>
