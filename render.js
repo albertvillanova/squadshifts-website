@@ -12,6 +12,8 @@ function renderLeaderboard(dataset) {
             var item = humans[i];
             item.rank = "";
             item.row_class = "human-row";
+            item[dataset + "_f1"] = parseFloat(item[dataset + "_f1"]).toFixed(1);
+            item[dataset + "_em"] = parseFloat(item[dataset + "_em"]).toFixed(1);
             rows.push(item)
         }
         // Models
@@ -29,6 +31,8 @@ function renderLeaderboard(dataset) {
             }
             item.rank = i + 1;
             item.row_class = ""
+            item[dataset + "_f1"] = parseFloat(item[dataset + "_f1"]).toFixed(1);
+            item[dataset + "_em"] = parseFloat(item[dataset + "_em"]).toFixed(1);
             rows.push(item)
         }
     data.leaderboard = rows
