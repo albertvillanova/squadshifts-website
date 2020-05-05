@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./static/index.css">
-    <title>The Effect of Natural Distribution Shift on Question Answering Models</title>
+    <title> The Effect of Natural Distribution Shift on Question Answering Models </title>
 </head>
 
 <body>
     <section id='header'>
         <h1 id='title'>
-            The Effect of Natural Distribution Shift <br/>
-            on Question Answering Models
+            <a class='no-underline-link' href="https://arxiv.org/abs/2004.14444">
+                The Effect of Natural Distribution Shift <br/>
+                on Question Answering Models
+            </a>
         </h1>
         <h2 id='authors' class='text-muted'>
             <ul>
@@ -51,7 +53,7 @@
             <img id='teaser-img' class='figure-img img-fluid' src='./images/figure1.svg' />
             <figcaption class='figure-caption text-left' id='figure1-caption'>
                 Model and human F1 scores on the original SQuAD v1.1 test set compared
-                to our new test sets for a broad set more than 100  models. Each
+                to our new test sets for a broad set of more than 100  models. Each
                 point corresponds to a model evaluation, shown with 95%
                 Student's-t confidence intervals (mostly covered by the point
                 markers). The plots reveal three main phenomena: (i) There is no
@@ -99,18 +101,22 @@
         </div>
     </section>
 
+    <section id="paper">
+        <h3 class="heading"> <a href="https://arxiv.org/abs/2004.14444"> <span> Paper </span> </a></h3>
+    </section>
+
     <section id='acknowledgements'>
         <h3 class='heading'><span>Acknowledgements</span></h3>
         We thank 
         <a href="https://rajpurkar.github.io">Pranav Rajpurkar</a>,
         <a href="http://stanford.edu/~robinjia/">Robin Jia</a>,
         and 
-        <a href="https://cs.stanford.edu/~pliang/">Percy Liang</a>,
+        <a href="https://cs.stanford.edu/~pliang/">Percy Liang</a>
         for providing us with the
         original SQuAD data generation pipeline and answering our many questions about
         the SQuAD dataset. We thank 
         <a href="https://cs.stanford.edu/~nfliu/">Nelson Liu</a>
-        for providing a large number of the SQuAD models we evaluated, and we thank 
+        for generously providing a large number of the SQuAD models we evaluated, and we thank 
         <a href="https://worksheets.codalab.org/home">the Codalab team</a>
         for supporting our model evaluation efforts. This research was
         generously supported in part by the National Science Foundation Graduate
@@ -118,5 +124,4 @@
         AWS AI Research Award, and a gift from Microsoft Research.
     </section>
 </body>
-
 </html>
