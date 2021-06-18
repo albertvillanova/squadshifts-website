@@ -1,501 +1,3050 @@
 {
-    "humans": [
-        {
-            "amazon_em": 79.866,
-            "amazon_f1": 92.59,
-            "institution": "UC Berkeley",
-            "name": "Human 1",
-            "new-wiki_em": 82.557,
-            "new-wiki_f1": 92.479,
-            "nyt_em": 85.972,
-            "nyt_f1": 94.971,
-            "paper_link": "",
-            "reddit_em": 80.072,
-            "reddit_f1": 92.405,
-            "test_em": 89.148,
-            "test_f1": 94.857
-        },
-        {
-            "amazon_em": 81.096,
-            "amazon_f1": 92.411,
-            "institution": "UC Berkeley",
-            "name": "Human 2",
-            "new-wiki_em": 83.207,
-            "new-wiki_f1": 92.399,
-            "nyt_em": 88.523,
-            "nyt_f1": 96.262,
-            "paper_link": "",
-            "reddit_em": 80.668,
-            "reddit_f1": 92.612,
-            "test_em": 88.692,
-            "test_f1": 94.891
-        },
-        {
-            "amazon_em": 79.3,
-            "amazon_f1": 91.195,
-            "institution": "UC Berkeley",
-            "name": "Human 3",
-            "new-wiki_em": 85.374,
-            "new-wiki_f1": 92.308,
-            "nyt_em": 85.76,
-            "nyt_f1": 93.664,
-            "paper_link": "",
-            "reddit_em": 81.026,
-            "reddit_f1": 91.729,
-            "test_em": 90.462,
-            "test_f1": 95.551
-        }
-    ],
-    "models": [
-        {
-            "amazon_em": 73.767,
-            "amazon_f1": 87.071,
-            "institution": "MST/EOI",
-            "name": "XLNET-123 (single model)",
-            "new-wiki_em": 83.96,
-            "new-wiki_f1": 92.59,
-            "nyt_em": 86.325,
-            "nyt_f1": 93.204,
-            "paper_link": "www.tia.today",
-            "reddit_em": 74.181,
-            "reddit_f1": 85.615,
-            "test_em": 89.646,
-            "test_f1": 94.93
-        },
-        {
-            "amazon_em": 71.251,
-            "amazon_f1": 84.253,
-            "institution": "FAIR & UW",
-            "name": "Tuned BERT-1seq Large Cased (single model)",
-            "new-wiki_em": 82.269,
-            "new-wiki_f1": 91.427,
-            "nyt_em": 83.737,
-            "nyt_f1": 91.183,
-            "paper_link": "",
-            "reddit_em": 70.978,
-            "reddit_f1": 82.856,
-            "test_em": 87.465,
-            "test_f1": 93.294
-        },
-        {
-            "amazon_em": 62.217,
-            "amazon_f1": 76.505,
-            "institution": "Anonymous",
-            "name": "MMIPN (single model)",
-            "new-wiki_em": 77.42,
-            "new-wiki_f1": 87.779,
-            "nyt_em": 77.006,
-            "nyt_f1": 86.382,
-            "paper_link": "",
-            "reddit_em": 63.636,
-            "reddit_f1": 77.281,
-            "test_em": 81.58,
-            "test_f1": 88.948
-        },
-        {
-            "amazon_em": 58.556,
-            "amazon_f1": 72.095,
-            "institution": "Yiwise NLP Group",
-            "name": "{EAZI} (ensemble)",
-            "new-wiki_em": 75.487,
-            "new-wiki_f1": 85.61,
-            "nyt_em": 76.038,
-            "nyt_f1": 84.34,
-            "paper_link": "",
-            "reddit_em": 61.961,
-            "reddit_f1": 74.566,
-            "test_em": 80.436,
-            "test_f1": 86.912
-        },
-        {
-            "amazon_em": 56.341,
-            "amazon_f1": 70.388,
-            "institution": "Allen Institute for Artificial Intelligence",
-            "name": "BiDAF + Self Attention + ELMo (single model)",
-            "new-wiki_em": 73.433,
-            "new-wiki_f1": 84.219,
-            "nyt_em": 74.451,
-            "nyt_f1": 83.322,
-            "paper_link": "",
-            "reddit_em": 59.707,
-            "reddit_f1": 72.935,
-            "test_em": 78.58,
-            "test_f1": 85.883
-        },
-        {
-            "amazon_em": 51.434,
-            "amazon_f1": 65.622,
-            "institution": "aviqa team",
-            "name": "AVIQA (single model)",
-            "new-wiki_em": 69.929,
-            "new-wiki_f1": 80.717,
-            "nyt_em": 68.768,
-            "nyt_f1": 78.316,
-            "paper_link": "",
-            "reddit_em": 54.595,
-            "reddit_f1": 67.978,
-            "test_em": 72.485,
-            "test_f1": 80.55
-        },
-        {
-            "amazon_em": 65.35,
-            "amazon_f1": 80.937,
-            "institution": "Anonymous",
-            "name": "DPN (single model)",
-            "new-wiki_em": 80.199,
-            "new-wiki_f1": 90.394,
-            "nyt_em": 80.45,
-            "nyt_f1": 89.302,
-            "paper_link": "",
-            "reddit_em": 67.147,
-            "reddit_f1": 81.087,
-            "test_em": 84.978,
-            "test_f1": 92.019
-        },
-        {
-            "amazon_em": 31.882,
-            "amazon_f1": 45.132,
-            "institution": "Anonymous ACL submission",
-            "name": "UnsupervisedQA V1",
-            "new-wiki_em": 39.858,
-            "new-wiki_f1": 53.51,
-            "nyt_em": 40.36,
-            "nyt_f1": 51.717,
-            "paper_link": "",
-            "reddit_em": 35.538,
-            "reddit_f1": 48.51,
-            "test_em": 44.215,
-            "test_f1": 54.723
-        },
-        {
-            "amazon_em": 42.929,
-            "amazon_f1": 59.543,
-            "institution": "UFL",
-            "name": "M-NET (single model)",
-            "new-wiki_em": 67.165,
-            "new-wiki_f1": 79.385,
-            "nyt_em": 65.549,
-            "nyt_f1": 76.235,
-            "paper_link": "",
-            "reddit_em": 46.526,
-            "reddit_f1": 62.245,
-            "test_em": 71.016,
-            "test_f1": 79.835
-        },
-        {
-            "amazon_em": 43.483,
-            "amazon_f1": 59.116,
-            "institution": "Technical University of Vienna",
-            "name": "SimpleBaseline (single model)",
-            "new-wiki_em": 65.73,
-            "new-wiki_f1": 78.009,
-            "nyt_em": 66.235,
-            "nyt_f1": 76.083,
-            "paper_link": "",
-            "reddit_em": 48.67,
-            "reddit_f1": 63.27,
-            "test_em": 69.6,
-            "test_f1": 78.236
-        },
-        {
-            "amazon_em": 66.205,
-            "amazon_f1": 80.716,
-            "institution": "FAIR & UW",
-            "name": "Original BERT Large Cased",
-            "new-wiki_em": 80.517,
-            "new-wiki_f1": 90.304,
-            "nyt_em": 80.394,
-            "nyt_f1": 89.042,
-            "paper_link": "",
-            "reddit_em": 68.28,
-            "reddit_f1": 81.227,
-            "test_em": 84.328,
-            "test_f1": 91.281
-        },
-        {
-            "amazon_em": 67.199,
-            "amazon_f1": 80.091,
-            "institution": "Jerry AGI Ragtag",
-            "name": "Common-sense Governed BERT-123 (single model)",
-            "new-wiki_em": 78.568,
-            "new-wiki_f1": 88.747,
-            "nyt_em": 79.482,
-            "nyt_f1": 87.828,
-            "paper_link": "www.tia.today",
-            "reddit_em": 68.083,
-            "reddit_f1": 80.768,
-            "test_em": 83.93,
-            "test_f1": 90.613
-        },
-        {
-            "amazon_em": 45.294,
-            "amazon_f1": 59.335,
-            "institution": "Anonymous",
-            "name": "RQA+IDR (single model)",
-            "new-wiki_em": 53.647,
-            "new-wiki_f1": 67.033,
-            "nyt_em": 56.837,
-            "nyt_f1": 68.472,
-            "paper_link": "",
-            "reddit_em": 46.181,
-            "reddit_f1": 59.338,
-            "test_em": 61.145,
-            "test_f1": 71.389
-        },
-        {
-            "amazon_em": 68.457,
-            "amazon_f1": 82.529,
-            "institution": "Google",
-            "name": "BERT-Large Baseline (single model)",
-            "new-wiki_em": 82.027,
-            "new-wiki_f1": 91.293,
-            "nyt_em": 83.376,
-            "nyt_f1": 91.147,
-            "paper_link": "",
-            "reddit_em": 69.648,
-            "reddit_f1": 82.283,
-            "test_em": 86.615,
-            "test_f1": 92.72
-        },
-        {
-            "amazon_em": 64.96,
-            "amazon_f1": 79.731,
-            "institution": "Google",
-            "name": "InfoWord-Base (single model)",
-            "new-wiki_em": 80.532,
-            "new-wiki_f1": 89.965,
-            "nyt_em": 80.833,
-            "nyt_f1": 89.032,
-            "paper_link": "",
-            "reddit_em": 66.778,
-            "reddit_f1": 79.733,
-            "test_em": 84.748,
-            "test_f1": 91.355
-        },
-        {
-            "amazon_em": 54.882,
-            "amazon_f1": 70.355,
-            "institution": "YUANFUDAO research NLP",
-            "name": "MARS (single model)",
-            "new-wiki_em": 76.272,
-            "new-wiki_f1": 86.427,
-            "nyt_em": 75.172,
-            "nyt_f1": 84.03,
-            "paper_link": "",
-            "reddit_em": 59.879,
-            "reddit_f1": 73.939,
-            "test_em": 83.185,
-            "test_f1": 89.547
-        },
-        {
-            "amazon_em": 66.86,
-            "amazon_f1": 80.914,
-            "institution": "Seoul National University & Hyundai Motors",
-            "name": "BISAN (single model)",
-            "new-wiki_em": 79.882,
-            "new-wiki_f1": 89.89,
-            "nyt_em": 80.608,
-            "nyt_f1": 89.044,
-            "paper_link": "",
-            "reddit_em": 68.379,
-            "reddit_f1": 81.399,
-            "test_em": 85.314,
-            "test_f1": 91.756
-        },
-        {
-            "amazon_em": 33.518,
-            "amazon_f1": 45.927,
-            "institution": "Anonymous",
-            "name": "UQA (single model)",
-            "new-wiki_em": 47.818,
-            "new-wiki_f1": 61.47,
-            "nyt_em": 48.981,
-            "nyt_f1": 59.824,
-            "paper_link": "",
-            "reddit_em": 34.947,
-            "reddit_f1": 46.906,
-            "test_em": 53.698,
-            "test_f1": 64.036
-        },
-        {
-            "amazon_em": 54.957,
-            "amazon_f1": 69.495,
-            "institution": "Yiwise NLP Group",
-            "name": "EAZI (single model)",
-            "new-wiki_em": 73.841,
-            "new-wiki_f1": 84.659,
-            "nyt_em": 73.078,
-            "nyt_f1": 82.382,
-            "paper_link": "",
-            "reddit_em": 58.327,
-            "reddit_f1": 72.192,
-            "test_em": 77.971,
-            "test_f1": 85.147
-        },
-        {
-            "amazon_em": 56.379,
-            "amazon_f1": 70.258,
-            "institution": "Zhejiang University",
-            "name": "MEMEN (single model)",
-            "new-wiki_em": 73.69,
-            "new-wiki_f1": 84.149,
-            "nyt_em": 70.951,
-            "nyt_f1": 81.182,
-            "paper_link": "https://arxiv.org/abs/1707.09098",
-            "reddit_em": 60.015,
-            "reddit_f1": 72.89,
-            "test_em": 78.234,
-            "test_f1": 85.344
-        },
-        {
-            "amazon_em": 51.774,
-            "amazon_f1": 64.116,
-            "institution": "FAIR",
-            "name": "{gqa} (single model)",
-            "new-wiki_em": 73.297,
-            "new-wiki_f1": 82.857,
-            "nyt_em": 70.287,
-            "nyt_f1": 78.694,
-            "paper_link": "",
-            "reddit_em": 54.274,
-            "reddit_f1": 66.115,
-            "test_em": 77.09,
-            "test_f1": 83.931
-        },
-        {
-            "amazon_em": 67.602,
-            "amazon_f1": 81.428,
-            "institution": "Anonymous",
-            "name": "BERT+Sparse-Transformer(single model)",
-            "new-wiki_em": 80.184,
-            "new-wiki_f1": 89.91,
-            "nyt_em": 80.281,
-            "nyt_f1": 89.006,
-            "paper_link": "",
-            "reddit_em": 69.056,
-            "reddit_f1": 81.838,
-            "test_em": 85.125,
-            "test_f1": 91.623
-        },
-        {
-            "amazon_em": 49.421,
-            "amazon_f1": 65.479,
-            "institution": "Facebook AI Research",
-            "name": "Jenga (single model)",
-            "new-wiki_em": 68.585,
-            "new-wiki_f1": 80.568,
-            "nyt_em": 67.091,
-            "nyt_f1": 77.802,
-            "paper_link": "",
-            "reddit_em": 52.34,
-            "reddit_f1": 67.702,
-            "test_em": 74.373,
-            "test_f1": 82.845
-        },
-        {
-            "amazon_em": 41.168,
-            "amazon_f1": 57.794,
-            "institution": "Allen Institute for AI",
-            "name": "AllenNLP BiDAF (single model)",
-            "new-wiki_em": 64.824,
-            "new-wiki_f1": 76.972,
-            "nyt_em": 63.489,
-            "nyt_f1": 74.247,
-            "paper_link": "http://allennlp.org/",
-            "reddit_em": 44.124,
-            "reddit_f1": 59.996,
-            "test_em": 67.974,
-            "test_f1": 77.323
-        },
-        {
-            "amazon_em": 56.14,
-            "amazon_f1": 70.245,
-            "institution": "QA geeks",
-            "name": "DNET (single model)",
-            "new-wiki_em": 72.799,
-            "new-wiki_f1": 83.844,
-            "nyt_em": 73.191,
-            "nyt_f1": 82.137,
-            "paper_link": "",
-            "reddit_em": 58.881,
-            "reddit_f1": 72.288,
-            "test_em": 77.646,
-            "test_f1": 84.905
-        },
-        {
-            "amazon_em": 76.558,
-            "amazon_f1": 88.601,
-            "institution": "Apple",
-            "name": "Delphi",
-            "new-wiki_em": 84.153,
-            "new-wiki_f1": 92.515,
-            "nyt_em": 86.981,
-            "nyt_f1": 93.573,
-            "paper_link": "https://arxiv.org/abs/1912.02145",
-            "reddit_em": 77.847,
-            "reddit_f1": 88.368,
-            "test_em": 89.598,
-            "test_f1": 94.69
-        },
-        {
-            "amazon_em": 70.58,
-            "amazon_f1": 84.032,
-            "institution": "Aristo @ AI2",
-            "name": "BERT-cased-whole-word",
-            "new-wiki_em": 82.726,
-            "new-wiki_f1": 91.969,
-            "nyt_em": 84.082,
-            "nyt_f1": 92.156,
-            "paper_link": "",
-            "reddit_em": 71.931,
-            "reddit_f1": 84.54,
-            "test_em": 87.132,
-            "test_f1": 93.427
-        },
-        {
-            "amazon_em": 60.274,
-            "amazon_f1": 76.725,
-            "institution": "Team 42-alpha",
-            "name": "Bert-Large+Adv. Train",
-            "new-wiki_em": 74.423,
-            "new-wiki_f1": 86.716,
-            "nyt_em": 74.109,
-            "nyt_f1": 85.708,
-            "paper_link": "https://arxiv.org/abs/1910.09342",
-            "reddit_em": 61.399,
-            "reddit_f1": 76.719,
-            "test_em": 80.061,
-            "test_f1": 88.6
-        },
-        {
-            "amazon_em": 62.406,
-            "amazon_f1": 76.25,
-            "institution": "BLCU",
-            "name": "BERT-Multi-Finetune",
-            "new-wiki_em": 75.379,
-            "new-wiki_f1": 86.395,
-            "nyt_em": 77.177,
-            "nyt_f1": 86.41,
-            "paper_link": "",
-            "reddit_em": 64.79,
-            "reddit_f1": 77.789,
-            "test_em": 79.513,
-            "test_f1": 87.664
-        },
-        {
-            "amazon_em": 60.998,
-            "amazon_f1": 77.167,
-            "institution": "Alexandria University",
-            "name": "HierAtt",
-            "new-wiki_em": 75.896,
-            "new-wiki_f1": 87.251,
-            "nyt_em": 75.575,
-            "nyt_f1": 86.382,
-            "paper_link": "https://www.aclweb.org/anthology/D19-5825/",
-            "reddit_em": 63.651,
-            "reddit_f1": 78.185,
-            "test_em": 79.724,
-            "test_f1": 87.753
-        }
-    ]
+    "amazon": {
+        "humans": [
+            {
+                "amazon_em": "79.866",
+                "amazon_f1": "92.590",
+                "institution": "UC Berkeley",
+                "name": "Human 1",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "81.096",
+                "amazon_f1": "92.411",
+                "institution": "UC Berkeley",
+                "name": "Human 2",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "79.300",
+                "amazon_f1": "91.195",
+                "institution": "UC Berkeley",
+                "name": "Human 3",
+                "paper_link": ""
+            }
+        ],
+        "models": [
+            {
+                "amazon_em": "72.180",
+                "amazon_f1": "85.689",
+                "institution": "MST/EOI",
+                "name": "XLNET-123 (single model)",
+                "paper_link": "www.tia.today"
+            },
+            {
+                "amazon_em": "69.439",
+                "amazon_f1": "82.523",
+                "institution": "FAIR & UW",
+                "name": "Tuned BERT-1seq Large Cased (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "60.556",
+                "amazon_f1": "74.993",
+                "institution": "Anonymous",
+                "name": "MMIPN (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "56.904",
+                "amazon_f1": "70.600",
+                "institution": "Yiwise NLP Group",
+                "name": "{EAZI} (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "55.043",
+                "amazon_f1": "69.152",
+                "institution": "Allen Institute for Artificial Intelligence",
+                "name": "BiDAF + Self Attention + ELMo (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "50.086",
+                "amazon_f1": "64.195",
+                "institution": "aviqa team",
+                "name": "AVIQA (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "63.864",
+                "amazon_f1": "79.299",
+                "institution": "Anonymous",
+                "name": "DPN (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "32.099",
+                "amazon_f1": "44.955",
+                "institution": "Anonymous ACL submission",
+                "name": "UnsupervisedQA V1",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "41.325",
+                "amazon_f1": "57.813",
+                "institution": "UFL",
+                "name": "M-NET (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "42.286",
+                "amazon_f1": "57.782",
+                "institution": "Technical University of Vienna",
+                "name": "SimpleBaseline (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "64.846",
+                "amazon_f1": "79.361",
+                "institution": "FAIR & UW",
+                "name": "Original BERT Large Cased",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "65.422",
+                "amazon_f1": "78.477",
+                "institution": "Jerry AGI Ragtag",
+                "name": "Common-sense Governed BERT-123 (single model)",
+                "paper_link": "www.tia.today"
+            },
+            {
+                "amazon_em": "45.483",
+                "amazon_f1": "59.526",
+                "institution": "Anonymous",
+                "name": "RQA+IDR (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "66.555",
+                "amazon_f1": "80.811",
+                "institution": "Google",
+                "name": "BERT-Large Baseline (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "63.126",
+                "amazon_f1": "78.018",
+                "institution": "Google",
+                "name": "InfoWord-Base (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "53.222",
+                "amazon_f1": "68.609",
+                "institution": "YUANFUDAO research NLP",
+                "name": "MARS (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "65.018",
+                "amazon_f1": "79.170",
+                "institution": "Seoul National University & Hyundai Motors",
+                "name": "BISAN (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "33.910",
+                "amazon_f1": "46.004",
+                "institution": "Anonymous",
+                "name": "UQA (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "53.809",
+                "amazon_f1": "68.248",
+                "institution": "Yiwise NLP Group",
+                "name": "EAZI (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "54.901",
+                "amazon_f1": "68.984",
+                "institution": "Zhejiang University",
+                "name": "MEMEN (single model)",
+                "paper_link": "https://arxiv.org/abs/1707.09098"
+            },
+            {
+                "amazon_em": "50.804",
+                "amazon_f1": "63.001",
+                "institution": "FAIR",
+                "name": "{gqa} (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "66.120",
+                "amazon_f1": "79.977",
+                "institution": "Anonymous",
+                "name": "BERT+Sparse-Transformer(single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "48.134",
+                "amazon_f1": "64.129",
+                "institution": "Facebook AI Research",
+                "name": "Jenga (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "39.757",
+                "amazon_f1": "56.169",
+                "institution": "Allen Institute for AI",
+                "name": "AllenNLP BiDAF (single model)",
+                "paper_link": "http://allennlp.org/"
+            },
+            {
+                "amazon_em": "54.952",
+                "amazon_f1": "68.965",
+                "institution": "QA geeks",
+                "name": "DNET (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "45.210",
+                "amazon_f1": "61.243",
+                "institution": "",
+                "name": "BiDAF + Self Attention (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "40.324",
+                "amazon_f1": "55.575",
+                "institution": "",
+                "name": "Match-LSTM w/ Bi-Ans-Ptr Boundary (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "43.460",
+                "amazon_f1": "59.043",
+                "institution": "",
+                "name": "Match-LSTM w/ Ans-Ptr (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "40.344",
+                "amazon_f1": "56.671",
+                "institution": "",
+                "name": "JNet (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "40.546",
+                "amazon_f1": "56.866",
+                "institution": "",
+                "name": "Mnemonic Reader (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "44.401",
+                "amazon_f1": "60.110",
+                "institution": "",
+                "name": "Mnemonic Reader (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "43.460",
+                "amazon_f1": "58.904",
+                "institution": "",
+                "name": "Ruminating Reader (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "37.805",
+                "amazon_f1": "51.739",
+                "institution": "",
+                "name": "Dynamic Chunk Reader (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "39.383",
+                "amazon_f1": "54.663",
+                "institution": "",
+                "name": "Iterative Co-Attention Network (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "47.628",
+                "amazon_f1": "62.881",
+                "institution": "",
+                "name": "DCN+ (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "41.093",
+                "amazon_f1": "56.859",
+                "institution": "",
+                "name": "Smarnet (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "46.788",
+                "amazon_f1": "61.579",
+                "institution": "",
+                "name": "MEMEN (Ensemble, original model in paper)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "54.709",
+                "amazon_f1": "68.736",
+                "institution": "",
+                "name": "MEMEN+ (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "56.753",
+                "amazon_f1": "70.350",
+                "institution": "",
+                "name": "MEMEN+ (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "32.160",
+                "amazon_f1": "46.482",
+                "institution": "",
+                "name": "OTF spelling+lemma (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "32.554",
+                "amazon_f1": "46.984",
+                "institution": "",
+                "name": "OTF spelling (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "35.276",
+                "amazon_f1": "49.400",
+                "institution": "",
+                "name": "OTF dict+spelling (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "38.735",
+                "amazon_f1": "54.443",
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "37.744",
+                "amazon_f1": "53.656",
+                "institution": "",
+                "name": "BIDAF-COMPOUND (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "37.906",
+                "amazon_f1": "54.661",
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT-DSS (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "39.282",
+                "amazon_f1": "54.731",
+                "institution": "",
+                "name": "BIDAF-COMPOUND-DSS (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "41.012",
+                "amazon_f1": "57.637",
+                "institution": "",
+                "name": "PQMN (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "44.026",
+                "amazon_f1": "60.123",
+                "institution": "",
+                "name": "MAMCN (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "44.390",
+                "amazon_f1": "60.090",
+                "institution": "",
+                "name": "attention+self-attention (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "45.878",
+                "amazon_f1": "61.524",
+                "institution": "",
+                "name": "two-attention-self-attention (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "48.447",
+                "amazon_f1": "63.581",
+                "institution": "",
+                "name": "two-attention-self-attention (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "43.713",
+                "amazon_f1": "59.905",
+                "institution": "",
+                "name": "Conductor-net (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "43.814",
+                "amazon_f1": "60.053",
+                "institution": "",
+                "name": "Interactive AoA Reader (Single Model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "48.174",
+                "amazon_f1": "63.040",
+                "institution": "",
+                "name": "Interactive AoA Reader (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "40.091",
+                "amazon_f1": "55.989",
+                "institution": "",
+                "name": "SSAE (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "44.927",
+                "amazon_f1": "59.874",
+                "institution": "",
+                "name": "SSAE (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "50.663",
+                "amazon_f1": "65.493",
+                "institution": "",
+                "name": "eeAttNet (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "46.697",
+                "amazon_f1": "62.175",
+                "institution": "",
+                "name": "Mixed model (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "53.343",
+                "amazon_f1": "66.614",
+                "institution": "",
+                "name": "RaSoR + TR + LM (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "53.809",
+                "amazon_f1": "67.671",
+                "institution": "",
+                "name": "AVIQA-v2 (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "49.499",
+                "amazon_f1": "66.044",
+                "institution": "",
+                "name": "FusionNet (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "47.658",
+                "amazon_f1": "64.154",
+                "institution": "",
+                "name": "FRC (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "47.860",
+                "amazon_f1": "64.346",
+                "institution": "",
+                "name": "MARS (single model, Jan 23)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "52.050",
+                "amazon_f1": "66.700",
+                "institution": "",
+                "name": "Jenga (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "51.280",
+                "amazon_f1": "66.563",
+                "institution": "",
+                "name": "AttentionReader+ (single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "56.854",
+                "amazon_f1": "71.321",
+                "institution": "",
+                "name": "AttentionReader+ (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "54.578",
+                "amazon_f1": "68.671",
+                "institution": "",
+                "name": "BiDAF++ (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "58.159",
+                "amazon_f1": "71.958",
+                "institution": "",
+                "name": "DNET (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "52.949",
+                "amazon_f1": "67.733",
+                "institution": "",
+                "name": "MDReader (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "55.083",
+                "amazon_f1": "69.325",
+                "institution": "",
+                "name": "BiDAF++ with pair2vec (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "56.581",
+                "amazon_f1": "70.257",
+                "institution": "",
+                "name": "aviqa-v2 (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "55.043",
+                "amazon_f1": "69.138",
+                "institution": "",
+                "name": "BiDAF + Self-Attention + ELMo (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "52.888",
+                "amazon_f1": "68.578",
+                "institution": "",
+                "name": "FusionNet (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "52.908",
+                "amazon_f1": "67.732",
+                "institution": "",
+                "name": "MDReader0 (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "56.115",
+                "amazon_f1": "71.789",
+                "institution": "",
+                "name": "BERT-INDEPENDENT (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "51.351",
+                "amazon_f1": "66.581",
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "66.252",
+                "amazon_f1": "80.310",
+                "institution": "",
+                "name": "Tuned BERT Large Cased (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "70.561",
+                "amazon_f1": "84.760",
+                "institution": "",
+                "name": "SpanBERT (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "56.712",
+                "amazon_f1": "70.588",
+                "institution": "",
+                "name": "EAZI+ (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "58.300",
+                "amazon_f1": "72.066",
+                "institution": "",
+                "name": "AVIQA+ (ensemble) (aviqa team)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "54.436",
+                "amazon_f1": "69.390",
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "57.127",
+                "amazon_f1": "70.772",
+                "institution": "",
+                "name": "BiDAF + Self Attention + ELMo (ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "59.879",
+                "amazon_f1": "73.566",
+                "institution": "",
+                "name": "BERT-COMPOUND (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "60.567",
+                "amazon_f1": "74.229",
+                "institution": "",
+                "name": "BERT-COMPOUND-DSS (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "54.760",
+                "amazon_f1": "69.983",
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D + DA (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "55.610",
+                "amazon_f1": "70.130",
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (ensemble model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "57.208",
+                "amazon_f1": "71.360",
+                "institution": "",
+                "name": "MARS (single model, May 9 2018)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "57.906",
+                "amazon_f1": "71.971",
+                "institution": "",
+                "name": "MARS (single model, June 21 2018)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "59.514",
+                "amazon_f1": "73.550",
+                "institution": "",
+                "name": "MARS (ensemble, June 20 2018)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "63.986",
+                "amazon_f1": "79.008",
+                "institution": "",
+                "name": "Common-sense Governed BERT-123 (single model, May 8 2019)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "64.633",
+                "amazon_f1": "79.921",
+                "institution": "",
+                "name": "BERT-uncased (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "63.126",
+                "amazon_f1": "78.018",
+                "institution": "",
+                "name": "InfoWord (base)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "67.466",
+                "amazon_f1": "81.496",
+                "institution": "",
+                "name": "InfoWord (large)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "62.296",
+                "amazon_f1": "77.124",
+                "institution": "",
+                "name": "InfoWord BERT baseline (base)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "66.555",
+                "amazon_f1": "80.811",
+                "institution": "",
+                "name": "InfoWord BERT baseline (large)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "53.890",
+                "amazon_f1": "81.667",
+                "institution": "",
+                "name": "XLNet (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "62.489",
+                "amazon_f1": "77.152",
+                "institution": "",
+                "name": "EL-BERT (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "65.524",
+                "amazon_f1": "79.629",
+                "institution": "",
+                "name": "ST_bl (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "64.067",
+                "amazon_f1": "80.187",
+                "institution": "",
+                "name": "BERT+MT (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "65.473",
+                "amazon_f1": "81.622",
+                "institution": "",
+                "name": "BERT+WWM+MT",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "74.112",
+                "amazon_f1": "87.215",
+                "institution": "",
+                "name": "XLNET-123++ (single model)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "49.550",
+                "amazon_f1": "64.896",
+                "institution": "",
+                "name": "Jenga (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "46.474",
+                "amazon_f1": "62.327",
+                "institution": "",
+                "name": "Conductor-net (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "46.839",
+                "amazon_f1": "62.183",
+                "institution": "",
+                "name": "Smarnet (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "42.479",
+                "amazon_f1": "58.830",
+                "institution": "",
+                "name": "JNet (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "42.762",
+                "amazon_f1": "57.635",
+                "institution": "",
+                "name": "RaSoR (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "40.860",
+                "amazon_f1": "57.755",
+                "institution": "",
+                "name": "ReasoNet (Single)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "46.930",
+                "amazon_f1": "62.668",
+                "institution": "",
+                "name": "ReasoNet (Ensemble)",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "75.676",
+                "amazon_f1": "87.749",
+                "institution": "Apple",
+                "name": "Delphi",
+                "paper_link": "https://arxiv.org/abs/1912.02145"
+            },
+            {
+                "amazon_em": "69.338",
+                "amazon_f1": "82.872",
+                "institution": "Aristo @ AI2",
+                "name": "BERT-cased-whole-word",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "59.784",
+                "amazon_f1": "75.969",
+                "institution": "Team 42-alpha",
+                "name": "Bert-Large+Adv. Train",
+                "paper_link": "https://arxiv.org/abs/1910.09342"
+            },
+            {
+                "amazon_em": "61.560",
+                "amazon_f1": "75.408",
+                "institution": "BLCU",
+                "name": "BERT-Multi-Finetune",
+                "paper_link": ""
+            },
+            {
+                "amazon_em": "59.733",
+                "amazon_f1": "75.678",
+                "institution": "Alexandria University",
+                "name": "HierAtt",
+                "paper_link": "https://www.aclweb.org/anthology/D19-5825/"
+            }
+        ]
+    },
+    "new-wiki": {
+        "humans": [
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 1",
+                "new-wiki_em": "82.557",
+                "new-wiki_f1": "92.479",
+                "paper_link": ""
+            },
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 2",
+                "new-wiki_em": "83.207",
+                "new-wiki_f1": "92.399",
+                "paper_link": ""
+            },
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 3",
+                "new-wiki_em": "85.374",
+                "new-wiki_f1": "92.308",
+                "paper_link": ""
+            }
+        ],
+        "models": [
+            {
+                "institution": "MST/EOI",
+                "name": "XLNET-123 (single model)",
+                "new-wiki_em": "83.535",
+                "new-wiki_f1": "92.192",
+                "paper_link": "www.tia.today"
+            },
+            {
+                "institution": "FAIR & UW",
+                "name": "Tuned BERT-1seq Large Cased (single model)",
+                "new-wiki_em": "82.137",
+                "new-wiki_f1": "90.992",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "MMIPN (single model)",
+                "new-wiki_em": "76.846",
+                "new-wiki_f1": "86.954",
+                "paper_link": ""
+            },
+            {
+                "institution": "Yiwise NLP Group",
+                "name": "{EAZI} (ensemble)",
+                "new-wiki_em": "75.183",
+                "new-wiki_f1": "85.075",
+                "paper_link": ""
+            },
+            {
+                "institution": "Allen Institute for Artificial Intelligence",
+                "name": "BiDAF + Self Attention + ELMo (single model)",
+                "new-wiki_em": "73.230",
+                "new-wiki_f1": "83.800",
+                "paper_link": ""
+            },
+            {
+                "institution": "aviqa team",
+                "name": "AVIQA (single model)",
+                "new-wiki_em": "69.690",
+                "new-wiki_f1": "80.297",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "DPN (single model)",
+                "new-wiki_em": "79.705",
+                "new-wiki_f1": "89.737",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous ACL submission",
+                "name": "UnsupervisedQA V1",
+                "new-wiki_em": "40.413",
+                "new-wiki_f1": "54.069",
+                "paper_link": ""
+            },
+            {
+                "institution": "UFL",
+                "name": "M-NET (single model)",
+                "new-wiki_em": "66.906",
+                "new-wiki_f1": "78.846",
+                "paper_link": ""
+            },
+            {
+                "institution": "Technical University of Vienna",
+                "name": "SimpleBaseline (single model)",
+                "new-wiki_em": "65.596",
+                "new-wiki_f1": "77.381",
+                "paper_link": ""
+            },
+            {
+                "institution": "FAIR & UW",
+                "name": "Original BERT Large Cased",
+                "new-wiki_em": "80.071",
+                "new-wiki_f1": "89.639",
+                "paper_link": ""
+            },
+            {
+                "institution": "Jerry AGI Ragtag",
+                "name": "Common-sense Governed BERT-123 (single model)",
+                "new-wiki_em": "78.294",
+                "new-wiki_f1": "88.117",
+                "paper_link": "www.tia.today"
+            },
+            {
+                "institution": "Anonymous",
+                "name": "RQA+IDR (single model)",
+                "new-wiki_em": "54.674",
+                "new-wiki_f1": "67.608",
+                "paper_link": ""
+            },
+            {
+                "institution": "Google",
+                "name": "BERT-Large Baseline (single model)",
+                "new-wiki_em": "81.759",
+                "new-wiki_f1": "90.824",
+                "paper_link": ""
+            },
+            {
+                "institution": "Google",
+                "name": "InfoWord-Base (single model)",
+                "new-wiki_em": "79.806",
+                "new-wiki_f1": "89.210",
+                "paper_link": ""
+            },
+            {
+                "institution": "YUANFUDAO research NLP",
+                "name": "MARS (single model)",
+                "new-wiki_em": "75.762",
+                "new-wiki_f1": "85.649",
+                "paper_link": ""
+            },
+            {
+                "institution": "Seoul National University & Hyundai Motors",
+                "name": "BISAN (single model)",
+                "new-wiki_em": "79.592",
+                "new-wiki_f1": "89.415",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "UQA (single model)",
+                "new-wiki_em": "48.765",
+                "new-wiki_f1": "62.055",
+                "paper_link": ""
+            },
+            {
+                "institution": "Yiwise NLP Group",
+                "name": "EAZI (single model)",
+                "new-wiki_em": "73.469",
+                "new-wiki_f1": "84.123",
+                "paper_link": ""
+            },
+            {
+                "institution": "Zhejiang University",
+                "name": "MEMEN (single model)",
+                "new-wiki_em": "73.684",
+                "new-wiki_f1": "83.856",
+                "paper_link": "https://arxiv.org/abs/1707.09098"
+            },
+            {
+                "institution": "FAIR",
+                "name": "{gqa} (single model)",
+                "new-wiki_em": "73.066",
+                "new-wiki_f1": "82.308",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "BERT+Sparse-Transformer(single model)",
+                "new-wiki_em": "79.819",
+                "new-wiki_f1": "89.414",
+                "paper_link": ""
+            },
+            {
+                "institution": "Facebook AI Research",
+                "name": "Jenga (single model)",
+                "new-wiki_em": "68.670",
+                "new-wiki_f1": "80.105",
+                "paper_link": ""
+            },
+            {
+                "institution": "Allen Institute for AI",
+                "name": "AllenNLP BiDAF (single model)",
+                "new-wiki_em": "64.664",
+                "new-wiki_f1": "76.499",
+                "paper_link": "http://allennlp.org/"
+            },
+            {
+                "institution": "QA geeks",
+                "name": "DNET (single model)",
+                "new-wiki_em": "72.701",
+                "new-wiki_f1": "83.441",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self Attention (Single)",
+                "new-wiki_em": "68.418",
+                "new-wiki_f1": "79.843",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Match-LSTM w/ Bi-Ans-Ptr Boundary (Single)",
+                "new-wiki_em": "61.111",
+                "new-wiki_f1": "73.396",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Match-LSTM w/ Ans-Ptr (Ensemble)",
+                "new-wiki_em": "64.752",
+                "new-wiki_f1": "76.646",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "JNet (Single)",
+                "new-wiki_em": "66.906",
+                "new-wiki_f1": "79.046",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Mnemonic Reader (Single)",
+                "new-wiki_em": "67.549",
+                "new-wiki_f1": "79.493",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Mnemonic Reader (Ensemble)",
+                "new-wiki_em": "70.635",
+                "new-wiki_f1": "81.580",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Ruminating Reader (Single)",
+                "new-wiki_em": "67.019",
+                "new-wiki_f1": "78.881",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Dynamic Chunk Reader (Single)",
+                "new-wiki_em": "59.310",
+                "new-wiki_f1": "70.641",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Iterative Co-Attention Network (Single)",
+                "new-wiki_em": "64.651",
+                "new-wiki_f1": "76.772",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "DCN+ (Single)",
+                "new-wiki_em": "71.378",
+                "new-wiki_f1": "81.813",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Smarnet (Single)",
+                "new-wiki_em": "67.095",
+                "new-wiki_f1": "78.796",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MEMEN (Ensemble, original model in paper)",
+                "new-wiki_em": "70.887",
+                "new-wiki_f1": "81.449",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MEMEN+ (Single)",
+                "new-wiki_em": "73.104",
+                "new-wiki_f1": "83.650",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MEMEN+ (Ensemble)",
+                "new-wiki_em": "75.057",
+                "new-wiki_f1": "85.002",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "OTF spelling+lemma (single)",
+                "new-wiki_em": "60.128",
+                "new-wiki_f1": "72.068",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "OTF spelling (single)",
+                "new-wiki_em": "60.557",
+                "new-wiki_f1": "72.483",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "OTF dict+spelling (single)",
+                "new-wiki_em": "61.338",
+                "new-wiki_f1": "73.101",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT (single)",
+                "new-wiki_em": "62.585",
+                "new-wiki_f1": "74.667",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-COMPOUND (single)",
+                "new-wiki_em": "63.114",
+                "new-wiki_f1": "74.948",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT-DSS (single)",
+                "new-wiki_em": "63.883",
+                "new-wiki_f1": "76.556",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-COMPOUND-DSS (single)",
+                "new-wiki_em": "64.122",
+                "new-wiki_f1": "75.592",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MAMCN (single model)",
+                "new-wiki_em": "67.788",
+                "new-wiki_f1": "79.231",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "attention+self-attention (single model)",
+                "new-wiki_em": "67.851",
+                "new-wiki_f1": "79.391",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "two-attention-self-attention (single model)",
+                "new-wiki_em": "68.556",
+                "new-wiki_f1": "80.050",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "two-attention-self-attention (ensemble)",
+                "new-wiki_em": "71.177",
+                "new-wiki_f1": "81.917",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Conductor-net (Single)",
+                "new-wiki_em": "69.287",
+                "new-wiki_f1": "81.162",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Interactive AoA Reader (Single Model)",
+                "new-wiki_em": "68.632",
+                "new-wiki_f1": "80.025",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Interactive AoA Reader (Ensemble)",
+                "new-wiki_em": "71.983",
+                "new-wiki_f1": "82.334",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "SSAE (Single)",
+                "new-wiki_em": "65.508",
+                "new-wiki_f1": "77.854",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "eeAttNet (Single)",
+                "new-wiki_em": "71.202",
+                "new-wiki_f1": "81.863",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Mixed model (ensemble)",
+                "new-wiki_em": "71.000",
+                "new-wiki_f1": "81.568",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "RaSoR + TR + LM (single model)",
+                "new-wiki_em": "73.759",
+                "new-wiki_f1": "83.079",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AVIQA-v2 (single model)",
+                "new-wiki_em": "71.151",
+                "new-wiki_f1": "81.789",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "FusionNet (single model)",
+                "new-wiki_em": "71.340",
+                "new-wiki_f1": "82.498",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "FRC (single model)",
+                "new-wiki_em": "72.336",
+                "new-wiki_f1": "83.275",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, Jan 23)",
+                "new-wiki_em": "72.235",
+                "new-wiki_f1": "83.319",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Jenga (ensemble)",
+                "new-wiki_em": "72.676",
+                "new-wiki_f1": "82.859",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AttentionReader+ (single)",
+                "new-wiki_em": "73.532",
+                "new-wiki_f1": "83.779",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AttentionReader+ (ensemble)",
+                "new-wiki_em": "76.279",
+                "new-wiki_f1": "86.110",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF++ (single model)",
+                "new-wiki_em": "72.676",
+                "new-wiki_f1": "83.351",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "DNET (ensemble)",
+                "new-wiki_em": "75.624",
+                "new-wiki_f1": "85.588",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MDReader (single model)",
+                "new-wiki_em": "73.507",
+                "new-wiki_f1": "84.287",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "aviqa-v2 (ensemble)",
+                "new-wiki_em": "74.351",
+                "new-wiki_f1": "84.409",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self-Attention + ELMo (single model)",
+                "new-wiki_em": "73.243",
+                "new-wiki_f1": "83.800",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MDReader0 (single model)",
+                "new-wiki_em": "73.003",
+                "new-wiki_f1": "83.722",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT-INDEPENDENT (single model)",
+                "new-wiki_em": "73.898",
+                "new-wiki_f1": "85.149",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (single model)",
+                "new-wiki_em": "74.452",
+                "new-wiki_f1": "84.722",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Tuned BERT Large Cased (single model)",
+                "new-wiki_em": "81.381",
+                "new-wiki_f1": "90.627",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "SpanBERT (single model)",
+                "new-wiki_em": "83.497",
+                "new-wiki_f1": "92.315",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AVIQA+ (ensemble) (aviqa team)",
+                "new-wiki_em": "76.090",
+                "new-wiki_f1": "85.933",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D (single model)",
+                "new-wiki_em": "75.195",
+                "new-wiki_f1": "85.740",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self Attention + ELMo (ensemble)",
+                "new-wiki_em": "75.120",
+                "new-wiki_f1": "85.082",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT-COMPOUND-DSS (single model)",
+                "new-wiki_em": "75.775",
+                "new-wiki_f1": "85.765",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D + DA (single model)",
+                "new-wiki_em": "76.052",
+                "new-wiki_f1": "86.184",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (ensemble model)",
+                "new-wiki_em": "76.934",
+                "new-wiki_f1": "86.477",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, May 9 2018)",
+                "new-wiki_em": "77.173",
+                "new-wiki_f1": "86.752",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, June 21 2018)",
+                "new-wiki_em": "78.118",
+                "new-wiki_f1": "87.046",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (ensemble, June 20 2018)",
+                "new-wiki_em": "79.101",
+                "new-wiki_f1": "87.976",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Common-sense Governed BERT-123 (single model, May 8 2019)",
+                "new-wiki_em": "78.206",
+                "new-wiki_f1": "89.272",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT-uncased (single model)",
+                "new-wiki_em": "79.239",
+                "new-wiki_f1": "89.367",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord (base)",
+                "new-wiki_em": "79.806",
+                "new-wiki_f1": "89.210",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord (large)",
+                "new-wiki_em": "82.212",
+                "new-wiki_f1": "91.035",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord BERT baseline (base)",
+                "new-wiki_em": "79.289",
+                "new-wiki_f1": "88.654",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord BERT baseline (large)",
+                "new-wiki_em": "81.759",
+                "new-wiki_f1": "90.824",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "XLNet (single model)",
+                "new-wiki_em": "84.165",
+                "new-wiki_f1": "92.344",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "EL-BERT (single model)",
+                "new-wiki_em": "80.121",
+                "new-wiki_f1": "89.563",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "ST_bl (single model)",
+                "new-wiki_em": "79.869",
+                "new-wiki_f1": "89.577",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT+MT (single model)",
+                "new-wiki_em": "80.902",
+                "new-wiki_f1": "90.385",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT+WWM+MT",
+                "new-wiki_em": "83.157",
+                "new-wiki_f1": "91.778",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "XLNET-123++ (single model)",
+                "new-wiki_em": "83.434",
+                "new-wiki_f1": "92.277",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Jenga (Single)",
+                "new-wiki_em": "68.430",
+                "new-wiki_f1": "80.184",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Conductor-net (Ensemble)",
+                "new-wiki_em": "72.714",
+                "new-wiki_f1": "83.119",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "RaSoR (Single)",
+                "new-wiki_em": "66.881",
+                "new-wiki_f1": "77.235",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "ReasoNet (Single)",
+                "new-wiki_em": "66.251",
+                "new-wiki_f1": "78.394",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "ReasoNet (Ensemble)",
+                "new-wiki_em": "70.635",
+                "new-wiki_f1": "81.277",
+                "paper_link": ""
+            },
+            {
+                "institution": "Apple",
+                "name": "Delphi",
+                "new-wiki_em": "83.954",
+                "new-wiki_f1": "92.202",
+                "paper_link": "https://arxiv.org/abs/1912.02145"
+            },
+            {
+                "institution": "Aristo @ AI2",
+                "name": "BERT-cased-whole-word",
+                "new-wiki_em": "82.345",
+                "new-wiki_f1": "91.503",
+                "paper_link": ""
+            },
+            {
+                "institution": "Team 42-alpha",
+                "name": "Bert-Large+Adv. Train",
+                "new-wiki_em": "74.848",
+                "new-wiki_f1": "86.550",
+                "paper_link": "https://arxiv.org/abs/1910.09342"
+            },
+            {
+                "institution": "BLCU",
+                "name": "BERT-Multi-Finetune",
+                "new-wiki_em": "75.469",
+                "new-wiki_f1": "86.174",
+                "paper_link": ""
+            },
+            {
+                "institution": "Alexandria University",
+                "name": "HierAtt",
+                "new-wiki_em": "75.735",
+                "new-wiki_f1": "86.788",
+                "paper_link": "https://www.aclweb.org/anthology/D19-5825/"
+            }
+        ]
+    },
+    "nyt": {
+        "humans": [
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 1",
+                "nyt_em": "85.972",
+                "nyt_f1": "94.971",
+                "paper_link": ""
+            },
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 2",
+                "nyt_em": "88.523",
+                "nyt_f1": "96.262",
+                "paper_link": ""
+            },
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 3",
+                "nyt_em": "85.760",
+                "nyt_f1": "93.664",
+                "paper_link": ""
+            }
+        ],
+        "models": [
+            {
+                "institution": "MST/EOI",
+                "name": "XLNET-123 (single model)",
+                "nyt_em": "85.991",
+                "nyt_f1": "92.771",
+                "paper_link": "www.tia.today"
+            },
+            {
+                "institution": "FAIR & UW",
+                "name": "Tuned BERT-1seq Large Cased (single model)",
+                "nyt_em": "83.497",
+                "nyt_f1": "90.814",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "MMIPN (single model)",
+                "nyt_em": "76.900",
+                "nyt_f1": "85.986",
+                "paper_link": ""
+            },
+            {
+                "institution": "Yiwise NLP Group",
+                "name": "{EAZI} (ensemble)",
+                "nyt_em": "75.787",
+                "nyt_f1": "83.841",
+                "paper_link": ""
+            },
+            {
+                "institution": "Allen Institute for Artificial Intelligence",
+                "name": "BiDAF + Self Attention + ELMo (single model)",
+                "nyt_em": "73.999",
+                "nyt_f1": "82.695",
+                "paper_link": ""
+            },
+            {
+                "institution": "aviqa team",
+                "name": "AVIQA (single model)",
+                "nyt_em": "68.833",
+                "nyt_f1": "78.086",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "DPN (single model)",
+                "nyt_em": "80.159",
+                "nyt_f1": "88.837",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous ACL submission",
+                "name": "UnsupervisedQA V1",
+                "nyt_em": "40.586",
+                "nyt_f1": "51.706",
+                "paper_link": ""
+            },
+            {
+                "institution": "UFL",
+                "name": "M-NET (single model)",
+                "nyt_em": "65.385",
+                "nyt_f1": "75.908",
+                "paper_link": ""
+            },
+            {
+                "institution": "Technical University of Vienna",
+                "name": "SimpleBaseline (single model)",
+                "nyt_em": "66.140",
+                "nyt_f1": "75.741",
+                "paper_link": ""
+            },
+            {
+                "institution": "FAIR & UW",
+                "name": "Original BERT Large Cased",
+                "nyt_em": "80.199",
+                "nyt_f1": "88.637",
+                "paper_link": ""
+            },
+            {
+                "institution": "Jerry AGI Ragtag",
+                "name": "Common-sense Governed BERT-123 (single model)",
+                "nyt_em": "79.096",
+                "nyt_f1": "87.405",
+                "paper_link": "www.tia.today"
+            },
+            {
+                "institution": "Anonymous",
+                "name": "RQA+IDR (single model)",
+                "nyt_em": "57.198",
+                "nyt_f1": "68.739",
+                "paper_link": ""
+            },
+            {
+                "institution": "Google",
+                "name": "BERT-Large Baseline (single model)",
+                "nyt_em": "82.961",
+                "nyt_f1": "90.593",
+                "paper_link": ""
+            },
+            {
+                "institution": "Google",
+                "name": "InfoWord-Base (single model)",
+                "nyt_em": "80.606",
+                "nyt_f1": "88.578",
+                "paper_link": ""
+            },
+            {
+                "institution": "YUANFUDAO research NLP",
+                "name": "MARS (single model)",
+                "nyt_em": "74.456",
+                "nyt_f1": "83.291",
+                "paper_link": ""
+            },
+            {
+                "institution": "Seoul National University & Hyundai Motors",
+                "name": "BISAN (single model)",
+                "nyt_em": "80.060",
+                "nyt_f1": "88.414",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "UQA (single model)",
+                "nyt_em": "49.498",
+                "nyt_f1": "60.213",
+                "paper_link": ""
+            },
+            {
+                "institution": "Yiwise NLP Group",
+                "name": "EAZI (single model)",
+                "nyt_em": "72.936",
+                "nyt_f1": "82.083",
+                "paper_link": ""
+            },
+            {
+                "institution": "Zhejiang University",
+                "name": "MEMEN (single model)",
+                "nyt_em": "70.611",
+                "nyt_f1": "80.669",
+                "paper_link": "https://arxiv.org/abs/1707.09098"
+            },
+            {
+                "institution": "FAIR",
+                "name": "{gqa} (single model)",
+                "nyt_em": "70.442",
+                "nyt_f1": "78.445",
+                "paper_link": ""
+            },
+            {
+                "institution": "Anonymous",
+                "name": "BERT+Sparse-Transformer(single model)",
+                "nyt_em": "79.692",
+                "nyt_f1": "88.324",
+                "paper_link": ""
+            },
+            {
+                "institution": "Facebook AI Research",
+                "name": "Jenga (single model)",
+                "nyt_em": "66.846",
+                "nyt_f1": "77.390",
+                "paper_link": ""
+            },
+            {
+                "institution": "Allen Institute for AI",
+                "name": "AllenNLP BiDAF (single model)",
+                "nyt_em": "63.318",
+                "nyt_f1": "73.848",
+                "paper_link": "http://allennlp.org/"
+            },
+            {
+                "institution": "QA geeks",
+                "name": "DNET (single model)",
+                "nyt_em": "72.757",
+                "nyt_f1": "81.627",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self Attention (Single)",
+                "nyt_em": "67.322",
+                "nyt_f1": "77.508",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Match-LSTM w/ Bi-Ans-Ptr Boundary (Single)",
+                "nyt_em": "57.457",
+                "nyt_f1": "68.806",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Match-LSTM w/ Ans-Ptr (Ensemble)",
+                "nyt_em": "60.874",
+                "nyt_f1": "71.909",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "JNet (Single)",
+                "nyt_em": "64.769",
+                "nyt_f1": "75.109",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Mnemonic Reader (Single)",
+                "nyt_em": "65.594",
+                "nyt_f1": "76.247",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Mnemonic Reader (Ensemble)",
+                "nyt_em": "69.180",
+                "nyt_f1": "78.473",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Ruminating Reader (Single)",
+                "nyt_em": "66.299",
+                "nyt_f1": "76.288",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Dynamic Chunk Reader (Single)",
+                "nyt_em": "59.076",
+                "nyt_f1": "68.377",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Iterative Co-Attention Network (Single)",
+                "nyt_em": "62.752",
+                "nyt_f1": "73.489",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "DCN+ (Single)",
+                "nyt_em": "66.855",
+                "nyt_f1": "76.961",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Smarnet (Single)",
+                "nyt_em": "64.491",
+                "nyt_f1": "74.862",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MEMEN (Ensemble, original model in paper)",
+                "nyt_em": "68.862",
+                "nyt_f1": "78.135",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MEMEN+ (Single)",
+                "nyt_em": "70.899",
+                "nyt_f1": "80.957",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MEMEN+ (Ensemble)",
+                "nyt_em": "72.370",
+                "nyt_f1": "81.925",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "OTF spelling+lemma (single)",
+                "nyt_em": "55.281",
+                "nyt_f1": "66.791",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "OTF spelling (single)",
+                "nyt_em": "56.185",
+                "nyt_f1": "67.028",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "OTF dict+spelling (single)",
+                "nyt_em": "57.228",
+                "nyt_f1": "68.134",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT (single)",
+                "nyt_em": "60.368",
+                "nyt_f1": "71.294",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-COMPOUND (single)",
+                "nyt_em": "60.765",
+                "nyt_f1": "71.416",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT-DSS (single)",
+                "nyt_em": "61.679",
+                "nyt_f1": "73.042",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-COMPOUND-DSS (single)",
+                "nyt_em": "62.563",
+                "nyt_f1": "72.970",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MAMCN (single model)",
+                "nyt_em": "67.014",
+                "nyt_f1": "77.197",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "attention+self-attention (single model)",
+                "nyt_em": "66.269",
+                "nyt_f1": "76.520",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "two-attention-self-attention (single model)",
+                "nyt_em": "68.087",
+                "nyt_f1": "77.928",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "two-attention-self-attention (ensemble)",
+                "nyt_em": "70.263",
+                "nyt_f1": "79.538",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Conductor-net (Single)",
+                "nyt_em": "67.601",
+                "nyt_f1": "77.641",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Interactive AoA Reader (Single Model)",
+                "nyt_em": "65.186",
+                "nyt_f1": "75.761",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Interactive AoA Reader (Ensemble)",
+                "nyt_em": "69.230",
+                "nyt_f1": "78.715",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "SSAE (Single)",
+                "nyt_em": "64.719",
+                "nyt_f1": "74.758",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "eeAttNet (Single)",
+                "nyt_em": "69.230",
+                "nyt_f1": "78.832",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Mixed model (ensemble)",
+                "nyt_em": "69.389",
+                "nyt_f1": "78.794",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "RaSoR + TR + LM (single model)",
+                "nyt_em": "72.837",
+                "nyt_f1": "80.807",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AVIQA-v2 (single model)",
+                "nyt_em": "71.416",
+                "nyt_f1": "80.255",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "FusionNet (single model)",
+                "nyt_em": "69.230",
+                "nyt_f1": "78.935",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "FRC (single model)",
+                "nyt_em": "70.104",
+                "nyt_f1": "80.257",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, Jan 23)",
+                "nyt_em": "70.114",
+                "nyt_f1": "80.157",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Jenga (ensemble)",
+                "nyt_em": "70.740",
+                "nyt_f1": "79.764",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AttentionReader+ (single)",
+                "nyt_em": "71.783",
+                "nyt_f1": "80.955",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AttentionReader+ (ensemble)",
+                "nyt_em": "76.384",
+                "nyt_f1": "84.700",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF++ (single model)",
+                "nyt_em": "72.380",
+                "nyt_f1": "81.377",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "DNET (ensemble)",
+                "nyt_em": "75.380",
+                "nyt_f1": "83.497",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MDReader (single model)",
+                "nyt_em": "74.267",
+                "nyt_f1": "82.938",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self-Attention + ELMo (single model)",
+                "nyt_em": "74.039",
+                "nyt_f1": "82.709",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MDReader0 (single model)",
+                "nyt_em": "73.870",
+                "nyt_f1": "82.628",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT-INDEPENDENT (single model)",
+                "nyt_em": "73.502",
+                "nyt_f1": "83.478",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (single model)",
+                "nyt_em": "73.751",
+                "nyt_f1": "82.570",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Tuned BERT Large Cased (single model)",
+                "nyt_em": "82.832",
+                "nyt_f1": "90.492",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "SpanBERT (single model)",
+                "nyt_em": "85.296",
+                "nyt_f1": "92.406",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "AVIQA+ (ensemble) (aviqa team)",
+                "nyt_em": "75.310",
+                "nyt_f1": "83.734",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D (single model)",
+                "nyt_em": "75.489",
+                "nyt_f1": "84.004",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self Attention + ELMo (ensemble)",
+                "nyt_em": "75.897",
+                "nyt_f1": "84.021",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT-COMPOUND (single model)",
+                "nyt_em": "75.827",
+                "nyt_f1": "84.305",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT-COMPOUND-DSS (single model)",
+                "nyt_em": "76.274",
+                "nyt_f1": "84.819",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D + DA (single model)",
+                "nyt_em": "74.883",
+                "nyt_f1": "84.048",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (ensemble model)",
+                "nyt_em": "75.917",
+                "nyt_f1": "84.093",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, May 9 2018)",
+                "nyt_em": "76.781",
+                "nyt_f1": "84.933",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, June 21 2018)",
+                "nyt_em": "77.109",
+                "nyt_f1": "85.092",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "MARS (ensemble, June 20 2018)",
+                "nyt_em": "78.728",
+                "nyt_f1": "86.186",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Common-sense Governed BERT-123 (single model, May 8 2019)",
+                "nyt_em": "78.738",
+                "nyt_f1": "88.230",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT-uncased (single model)",
+                "nyt_em": "80.378",
+                "nyt_f1": "88.926",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord (base)",
+                "nyt_em": "80.606",
+                "nyt_f1": "88.578",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord (large)",
+                "nyt_em": "83.805",
+                "nyt_f1": "91.133",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord BERT baseline (base)",
+                "nyt_em": "80.497",
+                "nyt_f1": "88.289",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "InfoWord BERT baseline (large)",
+                "nyt_em": "82.961",
+                "nyt_f1": "90.593",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "XLNet (single model)",
+                "nyt_em": "50.949",
+                "nyt_f1": "84.411",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "EL-BERT (single model)",
+                "nyt_em": "80.258",
+                "nyt_f1": "88.528",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "ST_bl (single model)",
+                "nyt_em": "80.507",
+                "nyt_f1": "88.875",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT+MT (single model)",
+                "nyt_em": "78.629",
+                "nyt_f1": "88.282",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "BERT+WWM+MT",
+                "nyt_em": "79.444",
+                "nyt_f1": "89.377",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "XLNET-123++ (single model)",
+                "nyt_em": "85.941",
+                "nyt_f1": "92.915",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Jenga (Single)",
+                "nyt_em": "66.696",
+                "nyt_f1": "77.009",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "Conductor-net (Ensemble)",
+                "nyt_em": "70.293",
+                "nyt_f1": "79.906",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "RaSoR (Single)",
+                "nyt_em": "65.296",
+                "nyt_f1": "74.311",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "ReasoNet (Single)",
+                "nyt_em": "64.103",
+                "nyt_f1": "74.963",
+                "paper_link": ""
+            },
+            {
+                "institution": "",
+                "name": "ReasoNet (Ensemble)",
+                "nyt_em": "69.260",
+                "nyt_f1": "78.458",
+                "paper_link": ""
+            },
+            {
+                "institution": "Apple",
+                "name": "Delphi",
+                "nyt_em": "86.941",
+                "nyt_f1": "93.427",
+                "paper_link": "https://arxiv.org/abs/1912.02145"
+            },
+            {
+                "institution": "Aristo @ AI2",
+                "name": "BERT-cased-whole-word",
+                "nyt_em": "83.792",
+                "nyt_f1": "91.746",
+                "paper_link": ""
+            },
+            {
+                "institution": "Team 42-alpha",
+                "name": "Bert-Large+Adv. Train",
+                "nyt_em": "74.483",
+                "nyt_f1": "85.821",
+                "paper_link": "https://arxiv.org/abs/1910.09342"
+            },
+            {
+                "institution": "BLCU",
+                "name": "BERT-Multi-Finetune",
+                "nyt_em": "77.142",
+                "nyt_f1": "86.101",
+                "paper_link": ""
+            },
+            {
+                "institution": "Alexandria University",
+                "name": "HierAtt",
+                "nyt_em": "75.522",
+                "nyt_f1": "86.079",
+                "paper_link": "https://www.aclweb.org/anthology/D19-5825/"
+            }
+        ]
+    },
+    "reddit": {
+        "humans": [
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 1",
+                "paper_link": "",
+                "reddit_em": "80.072",
+                "reddit_f1": "92.405"
+            },
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 2",
+                "paper_link": "",
+                "reddit_em": "80.668",
+                "reddit_f1": "92.612"
+            },
+            {
+                "institution": "UC Berkeley",
+                "name": "Human 3",
+                "paper_link": "",
+                "reddit_em": "81.026",
+                "reddit_f1": "91.729"
+            }
+        ],
+        "models": [
+            {
+                "institution": "MST/EOI",
+                "name": "XLNET-123 (single model)",
+                "paper_link": "www.tia.today",
+                "reddit_em": "73.804",
+                "reddit_f1": "84.857"
+            },
+            {
+                "institution": "FAIR & UW",
+                "name": "Tuned BERT-1seq Large Cased (single model)",
+                "paper_link": "",
+                "reddit_em": "70.764",
+                "reddit_f1": "82.198"
+            },
+            {
+                "institution": "Anonymous",
+                "name": "MMIPN (single model)",
+                "paper_link": "",
+                "reddit_em": "63.532",
+                "reddit_f1": "76.556"
+            },
+            {
+                "institution": "Yiwise NLP Group",
+                "name": "{EAZI} (ensemble)",
+                "paper_link": "",
+                "reddit_em": "62.114",
+                "reddit_f1": "74.183"
+            },
+            {
+                "institution": "Allen Institute for Artificial Intelligence",
+                "name": "BiDAF + Self Attention + ELMo (single model)",
+                "paper_link": "",
+                "reddit_em": "59.992",
+                "reddit_f1": "72.625"
+            },
+            {
+                "institution": "aviqa team",
+                "name": "AVIQA (single model)",
+                "paper_link": "",
+                "reddit_em": "54.810",
+                "reddit_f1": "67.679"
+            },
+            {
+                "institution": "Anonymous",
+                "name": "DPN (single model)",
+                "paper_link": "",
+                "reddit_em": "67.224",
+                "reddit_f1": "80.695"
+            },
+            {
+                "institution": "Anonymous ACL submission",
+                "name": "UnsupervisedQA V1",
+                "paper_link": "",
+                "reddit_em": "37.274",
+                "reddit_f1": "49.776"
+            },
+            {
+                "institution": "UFL",
+                "name": "M-NET (single model)",
+                "paper_link": "",
+                "reddit_em": "47.098",
+                "reddit_f1": "62.236"
+            },
+            {
+                "institution": "Technical University of Vienna",
+                "name": "SimpleBaseline (single model)",
+                "paper_link": "",
+                "reddit_em": "49.107",
+                "reddit_f1": "63.163"
+            },
+            {
+                "institution": "FAIR & UW",
+                "name": "Original BERT Large Cased",
+                "paper_link": "",
+                "reddit_em": "68.265",
+                "reddit_f1": "80.733"
+            },
+            {
+                "institution": "Jerry AGI Ragtag",
+                "name": "Common-sense Governed BERT-123 (single model)",
+                "paper_link": "www.tia.today",
+                "reddit_em": "67.683",
+                "reddit_f1": "79.956"
+            },
+            {
+                "institution": "Anonymous",
+                "name": "RQA+IDR (single model)",
+                "paper_link": "",
+                "reddit_em": "47.975",
+                "reddit_f1": "60.654"
+            },
+            {
+                "institution": "Google",
+                "name": "BERT-Large Baseline (single model)",
+                "paper_link": "",
+                "reddit_em": "68.887",
+                "reddit_f1": "81.245"
+            },
+            {
+                "institution": "Google",
+                "name": "InfoWord-Base (single model)",
+                "paper_link": "",
+                "reddit_em": "65.837",
+                "reddit_f1": "78.467"
+            },
+            {
+                "institution": "YUANFUDAO research NLP",
+                "name": "MARS (single model)",
+                "paper_link": "",
+                "reddit_em": "59.951",
+                "reddit_f1": "73.546"
+            },
+            {
+                "institution": "Seoul National University & Hyundai Motors",
+                "name": "BISAN (single model)",
+                "paper_link": "",
+                "reddit_em": "67.734",
+                "reddit_f1": "80.295"
+            },
+            {
+                "institution": "Anonymous",
+                "name": "UQA (single model)",
+                "paper_link": "",
+                "reddit_em": "36.754",
+                "reddit_f1": "48.226"
+            },
+            {
+                "institution": "Yiwise NLP Group",
+                "name": "EAZI (single model)",
+                "paper_link": "",
+                "reddit_em": "58.533",
+                "reddit_f1": "71.804"
+            },
+            {
+                "institution": "Zhejiang University",
+                "name": "MEMEN (single model)",
+                "paper_link": "https://arxiv.org/abs/1707.09098",
+                "reddit_em": "60.012",
+                "reddit_f1": "72.478"
+            },
+            {
+                "institution": "FAIR",
+                "name": "{gqa} (single model)",
+                "paper_link": "",
+                "reddit_em": "55.085",
+                "reddit_f1": "66.348"
+            },
+            {
+                "institution": "Anonymous",
+                "name": "BERT+Sparse-Transformer(single model)",
+                "paper_link": "",
+                "reddit_em": "68.877",
+                "reddit_f1": "81.113"
+            },
+            {
+                "institution": "Facebook AI Research",
+                "name": "Jenga (single model)",
+                "paper_link": "",
+                "reddit_em": "52.902",
+                "reddit_f1": "67.653"
+            },
+            {
+                "institution": "Allen Institute for AI",
+                "name": "AllenNLP BiDAF (single model)",
+                "paper_link": "http://allennlp.org/",
+                "reddit_em": "44.384",
+                "reddit_f1": "59.591"
+            },
+            {
+                "institution": "QA geeks",
+                "name": "DNET (single model)",
+                "paper_link": "",
+                "reddit_em": "59.196",
+                "reddit_f1": "72.054"
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self Attention (Single)",
+                "paper_link": "",
+                "reddit_em": "50.689",
+                "reddit_f1": "65.801"
+            },
+            {
+                "institution": "",
+                "name": "Match-LSTM w/ Bi-Ans-Ptr Boundary (Single)",
+                "paper_link": "",
+                "reddit_em": "46.374",
+                "reddit_f1": "60.413"
+            },
+            {
+                "institution": "",
+                "name": "Match-LSTM w/ Ans-Ptr (Ensemble)",
+                "paper_link": "",
+                "reddit_em": "50.536",
+                "reddit_f1": "64.799"
+            },
+            {
+                "institution": "",
+                "name": "JNet (Single)",
+                "paper_link": "",
+                "reddit_em": "46.690",
+                "reddit_f1": "60.974"
+            },
+            {
+                "institution": "",
+                "name": "Mnemonic Reader (Single)",
+                "paper_link": "",
+                "reddit_em": "46.945",
+                "reddit_f1": "62.166"
+            },
+            {
+                "institution": "",
+                "name": "Mnemonic Reader (Ensemble)",
+                "paper_link": "",
+                "reddit_em": "51.596",
+                "reddit_f1": "65.991"
+            },
+            {
+                "institution": "",
+                "name": "Ruminating Reader (Single)",
+                "paper_link": "",
+                "reddit_em": "49.974",
+                "reddit_f1": "64.240"
+            },
+            {
+                "institution": "",
+                "name": "Iterative Co-Attention Network (Single)",
+                "paper_link": "",
+                "reddit_em": "46.180",
+                "reddit_f1": "60.343"
+            },
+            {
+                "institution": "",
+                "name": "DCN+ (Single)",
+                "paper_link": "",
+                "reddit_em": "53.790",
+                "reddit_f1": "66.495"
+            },
+            {
+                "institution": "",
+                "name": "Smarnet (Single)",
+                "paper_link": "",
+                "reddit_em": "44.578",
+                "reddit_f1": "58.951"
+            },
+            {
+                "institution": "",
+                "name": "MEMEN (Ensemble, original model in paper)",
+                "paper_link": "",
+                "reddit_em": "53.463",
+                "reddit_f1": "66.577"
+            },
+            {
+                "institution": "",
+                "name": "MEMEN+ (Single)",
+                "paper_link": "",
+                "reddit_em": "59.859",
+                "reddit_f1": "72.414"
+            },
+            {
+                "institution": "",
+                "name": "MEMEN+ (Ensemble)",
+                "paper_link": "",
+                "reddit_em": "62.522",
+                "reddit_f1": "74.582"
+            },
+            {
+                "institution": "",
+                "name": "OTF spelling+lemma (single)",
+                "paper_link": "",
+                "reddit_em": "37.784",
+                "reddit_f1": "51.372"
+            },
+            {
+                "institution": "",
+                "name": "OTF spelling (single)",
+                "paper_link": "",
+                "reddit_em": "39.447",
+                "reddit_f1": "52.765"
+            },
+            {
+                "institution": "",
+                "name": "OTF dict+spelling (single)",
+                "paper_link": "",
+                "reddit_em": "39.529",
+                "reddit_f1": "53.759"
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT (single)",
+                "paper_link": "",
+                "reddit_em": "43.232",
+                "reddit_f1": "58.491"
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-COMPOUND (single)",
+                "paper_link": "",
+                "reddit_em": "42.701",
+                "reddit_f1": "57.509"
+            },
+            {
+                "institution": "",
+                "name": "BIDAF-INDEPENDENT-DSS (single)",
+                "paper_link": "",
+                "reddit_em": "42.161",
+                "reddit_f1": "57.838"
+            },
+            {
+                "institution": "",
+                "name": "MAMCN (single model)",
+                "paper_link": "",
+                "reddit_em": "50.291",
+                "reddit_f1": "64.669"
+            },
+            {
+                "institution": "",
+                "name": "attention+self-attention (single model)",
+                "paper_link": "",
+                "reddit_em": "50.576",
+                "reddit_f1": "64.689"
+            },
+            {
+                "institution": "",
+                "name": "two-attention-self-attention (single model)",
+                "paper_link": "",
+                "reddit_em": "52.117",
+                "reddit_f1": "66.148"
+            },
+            {
+                "institution": "",
+                "name": "two-attention-self-attention (ensemble)",
+                "paper_link": "",
+                "reddit_em": "55.065",
+                "reddit_f1": "68.430"
+            },
+            {
+                "institution": "",
+                "name": "Conductor-net (Single)",
+                "paper_link": "",
+                "reddit_em": "48.118",
+                "reddit_f1": "62.179"
+            },
+            {
+                "institution": "",
+                "name": "Interactive AoA Reader (Single Model)",
+                "paper_link": "",
+                "reddit_em": "48.006",
+                "reddit_f1": "62.689"
+            },
+            {
+                "institution": "",
+                "name": "Interactive AoA Reader (Ensemble)",
+                "paper_link": "",
+                "reddit_em": "53.025",
+                "reddit_f1": "66.586"
+            },
+            {
+                "institution": "",
+                "name": "SSAE (Single)",
+                "paper_link": "",
+                "reddit_em": "46.078",
+                "reddit_f1": "60.580"
+            },
+            {
+                "institution": "",
+                "name": "eeAttNet (Single)",
+                "paper_link": "",
+                "reddit_em": "55.238",
+                "reddit_f1": "68.320"
+            },
+            {
+                "institution": "",
+                "name": "RaSoR + TR + LM (single model)",
+                "paper_link": "",
+                "reddit_em": "58.584",
+                "reddit_f1": "70.642"
+            },
+            {
+                "institution": "",
+                "name": "AVIQA-v2 (single model)",
+                "paper_link": "",
+                "reddit_em": "58.268",
+                "reddit_f1": "70.725"
+            },
+            {
+                "institution": "",
+                "name": "FusionNet (single model)",
+                "paper_link": "",
+                "reddit_em": "54.483",
+                "reddit_f1": "69.103"
+            },
+            {
+                "institution": "",
+                "name": "FRC (single model)",
+                "paper_link": "",
+                "reddit_em": "55.146",
+                "reddit_f1": "69.523"
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, Jan 23)",
+                "paper_link": "",
+                "reddit_em": "54.279",
+                "reddit_f1": "69.417"
+            },
+            {
+                "institution": "",
+                "name": "AttentionReader+ (single)",
+                "paper_link": "",
+                "reddit_em": "57.401",
+                "reddit_f1": "70.826"
+            },
+            {
+                "institution": "",
+                "name": "AttentionReader+ (ensemble)",
+                "paper_link": "",
+                "reddit_em": "62.971",
+                "reddit_f1": "75.531"
+            },
+            {
+                "institution": "",
+                "name": "DNET (ensemble)",
+                "paper_link": "",
+                "reddit_em": "62.950",
+                "reddit_f1": "75.003"
+            },
+            {
+                "institution": "",
+                "name": "MDReader (single model)",
+                "paper_link": "",
+                "reddit_em": "59.186",
+                "reddit_f1": "72.035"
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self-Attention + ELMo (single model)",
+                "paper_link": "",
+                "reddit_em": "60.002",
+                "reddit_f1": "72.657"
+            },
+            {
+                "institution": "",
+                "name": "MDReader0 (single model)",
+                "paper_link": "",
+                "reddit_em": "58.727",
+                "reddit_f1": "71.958"
+            },
+            {
+                "institution": "",
+                "name": "BERT-INDEPENDENT (single model)",
+                "paper_link": "",
+                "reddit_em": "58.513",
+                "reddit_f1": "72.854"
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (single model)",
+                "paper_link": "",
+                "reddit_em": "57.187",
+                "reddit_f1": "70.125"
+            },
+            {
+                "institution": "",
+                "name": "Tuned BERT Large Cased (single model)",
+                "paper_link": "",
+                "reddit_em": "69.530",
+                "reddit_f1": "81.548"
+            },
+            {
+                "institution": "",
+                "name": "SpanBERT (single model)",
+                "paper_link": "",
+                "reddit_em": "73.284",
+                "reddit_f1": "85.448"
+            },
+            {
+                "institution": "",
+                "name": "AVIQA+ (ensemble) (aviqa team)",
+                "paper_link": "",
+                "reddit_em": "62.736",
+                "reddit_f1": "74.702"
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D (single model)",
+                "paper_link": "",
+                "reddit_em": "59.900",
+                "reddit_f1": "73.159"
+            },
+            {
+                "institution": "",
+                "name": "BiDAF + Self Attention + ELMo (ensemble)",
+                "paper_link": "",
+                "reddit_em": "62.348",
+                "reddit_f1": "74.524"
+            },
+            {
+                "institution": "",
+                "name": "BERT-COMPOUND (single model)",
+                "paper_link": "",
+                "reddit_em": "62.807",
+                "reddit_f1": "74.753"
+            },
+            {
+                "institution": "",
+                "name": "BERT-COMPOUND-DSS (single model)",
+                "paper_link": "",
+                "reddit_em": "63.807",
+                "reddit_f1": "75.433"
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader + A2D + DA (single model)",
+                "paper_link": "",
+                "reddit_em": "60.012",
+                "reddit_f1": "73.566"
+            },
+            {
+                "institution": "",
+                "name": "Reinforced Mnemonic Reader (ensemble model)",
+                "paper_link": "",
+                "reddit_em": "62.307",
+                "reddit_f1": "74.218"
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, May 9 2018)",
+                "paper_link": "",
+                "reddit_em": "62.991",
+                "reddit_f1": "75.530"
+            },
+            {
+                "institution": "",
+                "name": "MARS (single model, June 21 2018)",
+                "paper_link": "",
+                "reddit_em": "64.409",
+                "reddit_f1": "76.157"
+            },
+            {
+                "institution": "",
+                "name": "MARS (ensemble, June 20 2018)",
+                "paper_link": "",
+                "reddit_em": "65.970",
+                "reddit_f1": "77.939"
+            },
+            {
+                "institution": "",
+                "name": "Common-sense Governed BERT-123 (single model, May 8 2019)",
+                "paper_link": "",
+                "reddit_em": "67.367",
+                "reddit_f1": "80.844"
+            },
+            {
+                "institution": "",
+                "name": "BERT-uncased (single model)",
+                "paper_link": "",
+                "reddit_em": "67.245",
+                "reddit_f1": "80.134"
+            },
+            {
+                "institution": "",
+                "name": "InfoWord (base)",
+                "paper_link": "",
+                "reddit_em": "65.837",
+                "reddit_f1": "78.467"
+            },
+            {
+                "institution": "",
+                "name": "InfoWord (large)",
+                "paper_link": "",
+                "reddit_em": "70.540",
+                "reddit_f1": "82.486"
+            },
+            {
+                "institution": "",
+                "name": "InfoWord BERT baseline (base)",
+                "paper_link": "",
+                "reddit_em": "65.368",
+                "reddit_f1": "78.117"
+            },
+            {
+                "institution": "",
+                "name": "InfoWord BERT baseline (large)",
+                "paper_link": "",
+                "reddit_em": "68.887",
+                "reddit_f1": "81.245"
+            },
+            {
+                "institution": "",
+                "name": "XLNet (single model)",
+                "paper_link": "",
+                "reddit_em": "43.130",
+                "reddit_f1": "79.048"
+            },
+            {
+                "institution": "",
+                "name": "EL-BERT (single model)",
+                "paper_link": "",
+                "reddit_em": "65.562",
+                "reddit_f1": "78.233"
+            },
+            {
+                "institution": "",
+                "name": "ST_bl (single model)",
+                "paper_link": "",
+                "reddit_em": "68.663",
+                "reddit_f1": "80.915"
+            },
+            {
+                "institution": "",
+                "name": "BERT+MT (single model)",
+                "paper_link": "",
+                "reddit_em": "68.377",
+                "reddit_f1": "81.935"
+            },
+            {
+                "institution": "",
+                "name": "BERT+WWM+MT",
+                "paper_link": "",
+                "reddit_em": "69.203",
+                "reddit_f1": "82.958"
+            },
+            {
+                "institution": "",
+                "name": "XLNET-123++ (single model)",
+                "paper_link": "",
+                "reddit_em": "70.846",
+                "reddit_f1": "84.781"
+            },
+            {
+                "institution": "",
+                "name": "ReasoNet (Single)",
+                "paper_link": "",
+                "reddit_em": "47.434",
+                "reddit_f1": "62.518"
+            },
+            {
+                "institution": "",
+                "name": "ReasoNet (Ensemble)",
+                "paper_link": "",
+                "reddit_em": "53.280",
+                "reddit_f1": "67.255"
+            },
+            {
+                "institution": "Apple",
+                "name": "Delphi",
+                "paper_link": "https://arxiv.org/abs/1912.02145",
+                "reddit_em": "77.932",
+                "reddit_f1": "88.024"
+            },
+            {
+                "institution": "Aristo @ AI2",
+                "name": "BERT-cased-whole-word",
+                "paper_link": "",
+                "reddit_em": "72.022",
+                "reddit_f1": "84.028"
+            },
+            {
+                "institution": "Team 42-alpha",
+                "name": "Bert-Large+Adv. Train",
+                "paper_link": "https://arxiv.org/abs/1910.09342",
+                "reddit_em": "62.173",
+                "reddit_f1": "76.753"
+            },
+            {
+                "institution": "BLCU",
+                "name": "BERT-Multi-Finetune",
+                "paper_link": "",
+                "reddit_em": "65.210",
+                "reddit_f1": "77.684"
+            },
+            {
+                "institution": "Alexandria University",
+                "name": "HierAtt",
+                "paper_link": "https://www.aclweb.org/anthology/D19-5825/",
+                "reddit_em": "63.517",
+                "reddit_f1": "77.412"
+            }
+        ]
+    }
 }

@@ -7,14 +7,17 @@ function renderLeaderboard(dataset) {
     var rows = [];
     $.getJSON(LEADERBOARD_JSON, function (data) {
         // Humans
-        for (var i = 0; i < data.humans.length; i++) {
-            var item = data.humans[i];
+        var humans = data[dataset].humans;
+        for (var i = 0; i < humans.length; i++) {
+            var item = humans[i];
             item.rank = "";
             item.row_class = "human-row";
+            item[dataset + "_f1"] = parseFloat(item[dataset + "_f1"]).toFixed(1);
+            item[dataset + "_em"] = parseFloat(item[dataset + "_em"]).toFixed(1);
             rows.push(item)
         }
         // Models
-        var models = data.models;
+        var models = data[dataset].models;
         models.sort(
             function(a, b){
                 return b[dataset + "_f1"] - a[dataset + "_f1"]
@@ -28,6 +31,8 @@ function renderLeaderboard(dataset) {
             }
             item.rank = i + 1;
             item.row_class = ""
+            item[dataset + "_f1"] = parseFloat(item[dataset + "_f1"]).toFixed(1);
+            item[dataset + "_em"] = parseFloat(item[dataset + "_em"]).toFixed(1);
             rows.push(item)
         }
     data.leaderboard = rows

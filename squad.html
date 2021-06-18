@@ -15,15 +15,17 @@
 <body onload="renderLeaderboard('new-wiki')">
     <section id='header'>
         <h1 id='title'>
-            The Effect of Natural Distribution Shift <br/>
-            on Question Answering Models
+            <a class='no-underline-link' href="https://arxiv.org/abs/2004.14444">
+                The Effect of Natural Distribution Shift <br/>
+                on Question Answering Models
+            </a>
         </h1>
     <h2 id='authors' class='text-muted'>
         <ul>
             <li><a href='https://people.eecs.berkeley.edu/~miller_john/'>John Miller</a></li>
             <li><a href='https://www.karlk.net'>Karl Krauth</a></li>
+            <li><a href='https://people.eecs.berkeley.edu/~brecht/'>Benjamin Recht</a></li>
             <li><a href='https://people.csail.mit.edu/ludwigs/'>Ludwig Schmidt</a></li>
-            <li><a href='https://people.eecs.berkeley.edu/~brecht/'>Ben Recht</a></li>
         </ul>
     </h2>
     </section>
@@ -31,7 +33,7 @@
         <div class="content">
             <div id="links">
                 <a href="index.html"> <span> Home  </span> </a>
-                <a class="active" href="squad.html"> <span> SQuAD v1.2 </span> </a>
+                <a class="active" href="squad.html"> <span> New Wikipedia </span> </a>
                 <a href="nyt.html"> <span> New York Times </span> </a>
                 <a href="reddit.html"> <span> Reddit Comments </span> </a>
                 <a href="amazon.html"> <span> Amazon Reviews </span> </a>
@@ -43,7 +45,7 @@
         <div class="content">
             <div id="links">
                 <a href="https://ndownloader.figshare.com/files/28472799?private_link=2f119bea3e8d711047ec?">
-                    <span> Download SQuAD v1.2 data </span> 
+                    <span> Download New Wikipedia data </span> 
                 </a>
             </div>
         </div>
@@ -51,8 +53,8 @@
 
     <div class="infoCard">
         <div class="infoBody">
-            <div class="infoHeadline"><h2>SQuAD v1.2 Leaderboard </h2></div>
-            <p> The ExactMatch (EM) and F1 scores evaluated on the SQuAD v1.2 test set.</p>
+            <div class="infoHeadline"><h2>New Wikipedia Leaderboard </h2></div>
+            <p> The ExactMatch (EM) and F1 scores evaluated on the new Wikipedia test set.</p>
             <table class="table performanceTable" id="leaderboard"></table>
             <script id="template" type="x-tmpl-mustache">
                 <tr>
